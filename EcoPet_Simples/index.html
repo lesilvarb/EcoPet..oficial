@@ -1,0 +1,4687 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F7F0E7" />
+    <meta
+      name="description"
+      content="EcoPet — produtos sustentáveis e criativos para diferentes pets. Amor que cuida, escolhas que transformam."
+    />
+    <title>EcoPet · Amor que cuida</title>
+    <link rel="icon" href="assets/logo-ecopet.png" />
+  <!-- ESTILO DO SITE: cores e aparência -->
+<style>
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/lato-0.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/lato-1.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/lato-2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(assets/lato-3.ttf) format("truetype");
+}
+
+:root {
+  --cream: #f7f0e7;
+  --soft: #aab28d;
+  --eco: #5f7f2d;
+  --earth: #7b5429;
+  --deep: #314423;
+  --aqua: #6e9e97;
+  --white: #fff;
+  --line: #dddccd;
+  --font-size: 16px;
+  --letter: normal;
+  --word: normal;
+  --leading: 1.65;
+  color: var(--deep);
+  background: var(--cream);
+  font-family: Lato, Arial, sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--leading);
+  letter-spacing: var(--letter);
+  word-spacing: var(--word);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+}
+h1 {
+  font-size: clamp(2.15rem, 4.6vw, 4.35rem);
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 900;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 1.1em;
+}
+svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+small,
+.muted {
+  font-size: 0.88rem;
+  color: var(--earth);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip {
+  position: fixed;
+  top: -100px;
+  left: 12px;
+  z-index: 2000;
+  background: white;
+  padding: 12px;
+}
+.skip:focus {
+  top: 12px;
+}
+:focus-visible {
+  outline: 3px solid var(--earth);
+  outline-offset: 4px;
+}
+button,
+input,
+select {
+  min-height: 44px;
+}
+.container {
+  width: min(1240px, calc(100% - 64px));
+  margin: auto;
+}
+.section {
+  padding: 64px 0;
+}
+.eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--earth);
+  display: block;
+  margin-bottom: 16px;
+}
+.lead {
+  font-size: 1.15rem;
+  max-width: 680px;
+}
+.environment {
+  background: var(--soft);
+  text-align: center;
+  font-size: 0.76rem;
+  padding: 7px 16px;
+  letter-spacing: 0.025em;
+}
+.environment:empty {
+  display: none;
+}
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 16px 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.brand img {
+  width: 78px;
+  height: 84px;
+  object-fit: contain;
+}
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: var(--cream);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 3px 6px 3px 20px;
+}
+.search input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  background: none;
+  outline-offset: 0;
+}
+.search button {
+  border: 0;
+  background: none;
+  width: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.account-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.account-link small {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  position: relative;
+}
+.icon:hover {
+  background: var(--cream);
+}
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.64rem;
+  background: var(--eco);
+  color: white;
+  border-radius: 15px;
+  min-width: 18px;
+  padding: 0 4px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  border-top: 1px solid var(--line);
+  padding: 13px 0;
+  font-size: 0.88rem;
+}
+.nav a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav a[aria-current="page"] {
+  color: var(--eco);
+  font-weight: 700;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+.account-menu {
+  position: relative;
+}
+.account-menu summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.account-menu nav {
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  top: 50px;
+  background: white;
+  box-shadow: 0 12px 30px #31442320;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  width: 210px;
+  padding: 12px;
+  display: grid;
+}
+.account-menu nav a,
+.account-menu nav button {
+  padding: 10px;
+  border: 0;
+  text-decoration: none;
+  background: none;
+  text-align: left;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 0 56px;
+}
+.hero h1 {
+  max-width: 610px;
+}
+.hero p {
+  max-width: 470px;
+  color: var(--earth);
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--eco);
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--eco);
+  border-radius: 28px;
+  padding: 12px 23px;
+  min-height: 48px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.btn:hover {
+  filter: brightness(0.94);
+}
+.btn.secondary {
+  background: transparent;
+  color: var(--deep);
+  border-color: var(--soft);
+}
+.btn.light {
+  background: white;
+  color: var(--deep);
+  border-color: white;
+}
+.btn.small {
+  min-height: 44px;
+  padding: 9px 16px;
+}
+.hero-collage {
+  display: grid;
+  grid-template-columns: 1.05fr 0.8fr;
+  gap: 14px;
+  align-items: center;
+  position: relative;
+  padding-bottom: 28px;
+}
+.hero-collage img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.hero-collage .tall {
+  height: 390px;
+  grid-row: span 2;
+  border-radius: 100px 100px 30px 30px;
+}
+.hero-collage .short {
+  height: 170px;
+}
+.hero-seal {
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px #3144230d;
+  padding: 14px 22px;
+  border-radius: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.82rem;
+}
+.hero-seal svg {
+  color: var(--eco);
+  width: 30px;
+  height: 30px;
+}
+.hero-seal strong {
+  display: block;
+}
+.values-strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 24px 0;
+  gap: 28px;
+}
+.value {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 0.86rem;
+}
+.value svg {
+  color: var(--eco);
+  width: 30px;
+  height: 30px;
+}
+.value strong {
+  display: block;
+}
+.value span {
+  color: var(--earth);
+  font-size: 0.8rem;
+}
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+.section-head h2 {
+  margin: 0;
+}
+.text-link {
+  font-weight: 700;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 12px;
+}
+.animal {
+  background: white;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 18px 8px;
+  text-align: center;
+  border: 1px solid var(--line);
+  font-size: 0.76rem;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+.animal span {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.animal:hover {
+  background: #eef0e6;
+  border-color: var(--eco);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.product {
+  border: 1px solid var(--line);
+  border-radius: 23px;
+  background: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.product-media {
+  position: relative;
+  background: #eee9df;
+}
+.product-media > a {
+  display: block;
+}
+.product-media img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.product-media {
+  overflow: hidden;
+}
+.product:hover .product-media img {
+  transform: scale(1.035);
+}
+.favorite {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: white;
+  border: 0;
+  box-shadow: 0 3px 8px #31442312;
+}
+.favorite[aria-pressed="true"] {
+  color: var(--earth);
+  background: var(--cream);
+}
+.product-info {
+  padding: 22px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+}
+.product-info .eyebrow {
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+.product-info h3 {
+  font-size: 1.04rem;
+  margin: 0;
+  line-height: 1.4;
+  min-height: 2.8em;
+}
+.product-info h3 a {
+  text-decoration: none;
+}
+.product-info small {
+  font-size: 0.73rem;
+}
+.price {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--deep);
+}
+.product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.product-info > .btn {
+  width: 100%;
+}
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.story-art {
+  background: var(--soft);
+  border-radius: 26px;
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+  padding: 44px;
+}
+.story-art img {
+  width: 240px;
+  background: white;
+  border-radius: 24px;
+  padding: 18px;
+}
+.story .eyebrow {
+  margin-bottom: 14px;
+}
+.eco-banner {
+  border-radius: 28px;
+  background: var(--soft);
+  padding: 45px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+}
+.eco-banner h2 {
+  margin-bottom: 18px;
+}
+.eco-banner p {
+  max-width: 650px;
+}
+.eco-art {
+  font-size: 6rem;
+  text-align: center;
+  opacity: 0.7;
+}
+.pill {
+  font-size: 0.76rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: var(--cream);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.panel {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 28px;
+  border-radius: 22px;
+}
+.panels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.panels > .panel:nth-child(3n + 2) {
+  background: #e5e8d9;
+}
+.panels > .panel:nth-child(3n) {
+  background: #e4eeeb;
+}
+.panel h3 {
+  margin-bottom: 12px;
+}
+.empty {
+  text-align: center;
+  padding: 40px;
+  border: 1px dashed var(--soft);
+  border-radius: 20px;
+  background: #ffffff70;
+}
+.empty h2 {
+  font-size: 1.6rem;
+}
+.empty p {
+  max-width: 550px;
+  margin: 0 auto 22px;
+}
+.notice {
+  padding: 16px 20px;
+  border-left: 3px solid var(--eco);
+  background: #e9eddf;
+  border-radius: 0 12px 12px 0;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+.error {
+  color: #7b5429;
+  border-color: #7b5429;
+  background: #f7f0e7;
+}
+.error:empty {
+  display: none;
+}
+footer {
+  background: var(--deep);
+  color: var(--cream);
+  margin-top: 60px;
+  padding: 50px 0 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 30px;
+}
+.footer-grid img {
+  width: 90px;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.footer-grid h3 {
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+.footer-grid p,
+.footer-grid a {
+  font-size: 0.8rem;
+}
+.footer-grid nav {
+  display: grid;
+  gap: 10px;
+}
+.footer-grid a {
+  text-decoration: none;
+}
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  border-top: 1px solid #ffffff25;
+  margin-top: 34px;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  gap: 20px;
+}
+.footer-bottom select {
+  background: var(--cream);
+  border: 0;
+  border-radius: 8px;
+  padding: 5px;
+}
+.breadcrumbs {
+  font-size: 0.8rem;
+  margin-bottom: 28px;
+  color: var(--earth);
+}
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+}
+.catalog-layout .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.filters {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 22px;
+  border-radius: 20px;
+}
+.field {
+  display: grid;
+  gap: 7px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  min-width: 0;
+}
+.field input,
+.field select,
+.field textarea,
+input.control,
+select.control {
+  width: 100%;
+  border: 1px solid var(--soft);
+  background: white;
+  border-radius: 10px;
+  padding: 10px 12px;
+  min-width: 0;
+  font-weight: 400;
+}
+.field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.field small {
+  font-weight: 400;
+}
+.form {
+  display: grid;
+  gap: 18px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.catalog-top {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.catalog-top select {
+  max-width: 220px;
+}
+.detail {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.detail h1 {
+  font-size: clamp(2rem, 3vw, 3.1rem);
+}
+.detail .price {
+  font-size: 2rem;
+  margin: 18px 0;
+}
+.detail-photo {
+  border: 0;
+  padding: 0;
+  border-radius: 28px;
+  background: white;
+  overflow: hidden;
+  width: 100%;
+  cursor: zoom-in;
+}
+.detail-photo img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+}
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+.thumbnails button {
+  width: 70px;
+  padding: 0;
+  border: 1px solid var(--soft);
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.detail-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 50px;
+}
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--soft);
+  border-radius: 25px;
+  overflow: hidden;
+  background: white;
+}
+.quantity button {
+  border: 0;
+  background: transparent;
+  width: 42px;
+  min-height: 44px;
+}
+.quantity input {
+  width: 45px;
+  text-align: center;
+  border: 0;
+  background: none;
+  appearance: textfield;
+}
+.quantity input::-webkit-inner-spin-button {
+  appearance: none;
+}
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 35px;
+}
+.cart-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cart-row img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.cart-row h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.cart-row p {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.summary {
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+.total-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 0.9rem;
+  padding: 10px 0;
+}
+.total-line.big {
+  border-top: 1px solid var(--line);
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-top: 12px;
+}
+.auth {
+  max-width: 510px;
+  margin: 45px auto;
+}
+.auth > img {
+  width: 100px;
+  margin: 0 auto 22px;
+}
+.auth h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+.auth .btn {
+  width: 100%;
+}
+.password-wrap {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.password-wrap input {
+  flex: 1;
+  width: 100%;
+}
+.check {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  align-items: start;
+  font-weight: 400;
+}
+.check input {
+  width: 20px;
+  min-height: 20px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.steps {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 12px;
+  overflow: auto;
+  margin: 0 0 35px;
+}
+.steps li {
+  padding: 12px 18px;
+  border: 1px solid var(--soft);
+  border-radius: 24px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.steps li.active {
+  background: var(--deep);
+  color: white;
+}
+.steps li.done {
+  background: var(--soft);
+}
+.radio-card {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: white;
+  align-items: center;
+  cursor: pointer;
+}
+.radio-card input {
+  width: 20px;
+  flex-shrink: 0;
+}
+.radio-card:has(input:checked) {
+  border: 2px solid var(--eco);
+}
+.radio-card span {
+  flex: 1;
+}
+.radio-card small {
+  display: block;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+.timeline li {
+  border-left: 2px solid var(--soft);
+  padding: 0 0 25px 25px;
+  position: relative;
+}
+.timeline li::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--eco);
+  position: absolute;
+  left: -7px;
+  top: 6px;
+}
+.timeline time {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--earth);
+}
+.pix {
+  max-width: 540px;
+  margin: auto;
+  text-align: center;
+}
+.pix .logo {
+  width: 85px;
+  margin: auto auto 20px;
+}
+.pix .qr {
+  width: 230px;
+  margin: 20px auto;
+}
+.pix textarea {
+  width: 100%;
+  border: 1px solid var(--soft);
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 90px;
+  word-break: break-all;
+}
+.notification {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.notification.unread {
+  border-left: 4px solid var(--eco);
+}
+.notification p {
+  margin-bottom: 5px;
+}
+.notification time {
+  font-size: 0.78rem;
+}
+.access-open {
+  position: fixed;
+  right: 16px;
+  bottom: 25px;
+  z-index: 50;
+  width: 52px;
+  height: 52px;
+  background: var(--deep);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 20px #31442330;
+}
+.access-open svg {
+  width: 30px;
+  height: 30px;
+}
+dialog {
+  border: 1px solid var(--soft);
+  border-radius: 22px;
+  padding: 26px;
+  background: var(--cream);
+  color: var(--deep);
+  box-shadow: 0 20px 70px #0003;
+  max-width: calc(100vw - 24px);
+}
+dialog::backdrop {
+  background: #17201166;
+}
+#access-panel {
+  position: fixed;
+  inset: 12px 12px 12px auto;
+  margin: 0;
+  width: 380px;
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+#access-panel h2 {
+  font-size: 1.6rem;
+  margin-right: 40px;
+}
+#access-panel h3 {
+  font-size: 1rem;
+  margin: 20px 0 12px;
+}
+.access-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.access-controls button {
+  background: white;
+  border: 1px solid var(--soft);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+.close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 1.7rem;
+}
+#image-zoom {
+  max-height: 90dvh;
+  padding: 45px 20px 20px;
+}
+#image-zoom img {
+  max-height: 75dvh;
+  object-fit: contain;
+}
+#gesture-video {
+  width: 100%;
+  border-radius: 12px;
+  transform: scaleX(-1);
+  margin-top: 14px;
+}
+#gesture-video[hidden] {
+  display: none;
+}
+#toasts {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  pointer-events: none;
+  max-width: calc(100% - 100px);
+  background: var(--deep);
+  color: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 25px #0002;
+  padding: 14px 22px;
+  font-size: 0.9rem;
+}
+#toasts:empty {
+  display: none;
+}
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.admin-tabs a {
+  border: 1px solid var(--soft);
+  border-radius: 22px;
+  padding: 9px 16px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.admin-tabs .active {
+  background: var(--deep);
+  color: white;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 24px 0;
+}
+.metrics strong {
+  font-size: 2rem;
+  display: block;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  font-size: 0.85rem;
+}
+.table td,
+.table th {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.table th {
+  background: #e5e8d9;
+}
+.code-input {
+  font-family: monospace;
+  font-size: 0.8rem !important;
+  min-height: 260px !important;
+}
+.loading {
+  padding: 80px;
+  text-align: center;
+}
+.thank-you {
+  background: var(--cream);
+  padding: 40px;
+  border: 1px solid var(--soft);
+  text-align: center;
+  border-radius: 20px;
+}
+.thank-you img {
+  width: 110px;
+  margin: auto auto 22px;
+}
+.thank-you p {
+  font-style: italic;
+  font-size: 1.3rem;
+}
+.translated-notice {
+  font-size: 0.8rem;
+  padding: 14px 0;
+  color: var(--earth);
+}
+html.contrast {
+  --cream: #fff;
+  --soft: #ddd;
+  --eco: #000;
+  --earth: #000;
+  --deep: #000;
+  --aqua: #444;
+  --line: #000;
+}
+html.contrast .panel,
+html.contrast .notice,
+html.contrast .product,
+html.contrast .eco-banner,
+html.contrast .story-art {
+  background: #fff;
+  color: #000;
+}
+html.contrast .environment {
+  background: #000;
+  color: white;
+}
+html.contrast a {
+  text-decoration: underline;
+}
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (min-width: 1500px) {
+  .hero {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 1100px) {
+  .header-top {
+    gap: 18px;
+  }
+  .header-actions {
+    gap: 3px;
+  }
+  .nav {
+    gap: 24px;
+  }
+  .animal-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .catalog-layout .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero {
+    gap: 30px;
+  }
+  .hero-collage .tall {
+    height: 330px;
+  }
+  .hero-collage img {
+    height: 190px;
+  }
+  .hero-collage .short {
+    height: 140px;
+  }
+  .detail {
+    gap: 32px;
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+  .header-top {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    padding: 12px 0;
+    gap: 12px;
+  }
+  .brand img {
+    width: 61px;
+    height: 66px;
+  }
+  .search {
+    grid-row: 2;
+    grid-column: span 2;
+  }
+  .header-actions {
+    justify-content: flex-end;
+    gap: 4px;
+  }
+  .account-link {
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+  .account-link svg {
+    display: none;
+  }
+  .account-link small {
+    font-size: 0.68rem;
+  }
+  .nav {
+    justify-content: flex-start;
+    overflow: auto;
+    gap: 24px;
+    padding: 12px 16px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 38px;
+    gap: 30px;
+  }
+  .hero h1 {
+    max-width: 540px;
+  }
+  .hero-collage {
+    max-width: 530px;
+    width: 100%;
+    margin: auto;
+  }
+  .hero-collage .tall {
+    height: 310px;
+  }
+  .hero-collage img {
+    height: 180px;
+  }
+  .hero-collage .short {
+    height: 130px;
+  }
+  .section {
+    padding: 38px 0;
+  }
+  .values-strip {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .animal-grid {
+    gap: 8px;
+  }
+  .animal {
+    font-size: 0.65rem;
+    padding: 12px 4px;
+    border-radius: 14px;
+  }
+  .animal span {
+    font-size: 1.7rem;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .product-info {
+    padding: 15px;
+    gap: 9px;
+  }
+  .product-info h3 {
+    font-size: 0.9rem;
+  }
+  .product-info .price {
+    font-size: 1.14rem;
+  }
+  .product-info .btn {
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+  .story,
+  .eco-banner,
+  .detail {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .story-art {
+    min-height: 280px;
+  }
+  .story-art img {
+    width: 190px;
+  }
+  .eco-banner {
+    padding: 28px;
+  }
+  .eco-art {
+    display: none;
+  }
+  .panels,
+  .detail-cards {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .footer-grid > div:first-child {
+    grid-column: span 2;
+  }
+  .footer-bottom {
+    flex-direction: column;
+  }
+  .catalog-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .filters {
+    grid-template-columns: 1fr 1fr;
+    padding: 18px;
+    gap: 12px;
+  }
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+  .summary {
+    position: static;
+  }
+  .cart-row {
+    grid-template-columns: 70px 1fr;
+    gap: 14px;
+  }
+  .cart-row img {
+    width: 70px;
+    height: 80px;
+  }
+  .cart-row > strong {
+    grid-column: 2;
+  }
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+  .panel {
+    padding: 22px;
+  }
+  .auth {
+    margin: 28px 0;
+  }
+  .section-head {
+    align-items: start;
+  }
+  .section-head .text-link {
+    white-space: normal;
+  }
+  .access-open {
+    right: 10px;
+    bottom: 16px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-photo img {
+    max-height: 420px;
+  }
+}
+@media (max-width: 380px) {
+  .header-actions {
+    gap: 0;
+  }
+  .icon {
+    min-width: 39px;
+  }
+  .account-link {
+    font-size: 0.68rem;
+  }
+  .animal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filters,
+  .grid,
+  .catalog-layout .grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-collage {
+    gap: 8px;
+  }
+  .btn {
+    padding: 12px 18px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid > div:first-child {
+    grid-column: auto;
+  }
+}
+
+</style>
+<style>
+.demo-timeline { list-style: none; padding: 0; margin: 24px 0; }
+.demo-timeline li { border-left: 3px solid #AAB28D; padding: 0 0 24px 20px; margin-left: 8px; }
+.demo-timeline li[aria-current="step"] { border-color: #5F7F2D; }
+.demo-timeline small { display: block; margin-top: 5px; }
+.demo-timeline li:last-child { padding-bottom: 0; }
+</style>
+<style>
+/* Renovação visual: identidade EcoPet, fotos originais e layouts fluidos. */
+.container{max-width:1320px;width:min(92%,1320px)}
+h1,h2,h3{letter-spacing:-.035em}h2{font-size:clamp(1.8rem,3.2vw,3rem);line-height:1.12}
+.btn{border-radius:999px;padding:14px 23px;min-height:46px}.btn.small{padding:11px 16px}.section{padding-top:64px;padding-bottom:24px}
+.environment{font-size:.75rem;background:var(--deep);color:var(--cream);padding:6px 16px;text-align:center}
+.nav{border-top:1px solid var(--line);background:var(--cream)}
+.fresh-hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:50px 0 48px;align-items:center}
+.fresh-copy{padding:20px 0}.fresh-copy h1{font-size:clamp(2.8rem,5.5vw,5.1rem);line-height:1.02;margin:24px 0;color:var(--deep)}
+.fresh-copy h1 span{color:var(--eco)}.fresh-copy>p{font-size:1.2rem;line-height:1.6;margin:24px 0 30px}.hero-footnote{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:40px;font-size:.8rem;font-weight:700}.hero-footnote span{color:var(--earth);font-size:1.25rem}
+.fresh-photos{position:relative;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:14px;padding:34px 0 50px;min-width:0}
+.hero-main-photo,.hero-small-photo{position:relative;display:block;overflow:hidden;background:var(--soft)}.hero-main-photo{border-radius:150px 150px 28px 28px;align-self:start}.hero-small-photo{border-radius:24px 24px 100px 100px;margin-top:125px;background:var(--aqua)}
+.fresh-photos img{display:block;object-fit:cover;width:100%;height:390px}.hero-small-photo img{height:260px}.fresh-photos a>span{display:block;padding:18px;color:var(--deep);font-size:.9rem;font-weight:700}.hero-small-photo>span{padding-bottom:35px}.round-note{position:absolute;top:5px;right:8px;width:140px;height:140px;border-radius:50%;background:var(--earth);color:var(--cream);display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:.7rem;line-height:1.5;transform:rotate(8deg)}.round-note strong{font-size:1.5rem}.round-note svg{width:28px;height:28px;margin-top:8px}
+.brand-ribbon{display:flex;justify-content:space-around;align-items:center;gap:20px;padding:23px 28px;border-radius:18px;background:var(--soft);font-weight:700}.brand-ribbon b{color:var(--earth);font-size:1.7rem}
+.animal-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.animal{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px 12px;transition:transform .2s,background .2s}.animal:nth-child(3n+1){background:var(--soft)}.animal:nth-child(3n+2){background:var(--aqua)}.animal:hover{transform:translateY(-4px)}.animal span{font-size:2.3rem}
+.section-head{align-items:end;gap:24px;margin-bottom:30px}.section-intro{max-width:360px;margin:0}.product{border-radius:24px;overflow:hidden;background:white;border:1px solid var(--line);box-shadow:0 8px 28px #31442308}.product-media{padding:10px 10px 0;background:white}.product-media>a{border-radius:18px;overflow:hidden}.product-media img{aspect-ratio:1/1;object-fit:cover}.product-info{padding:20px}.product-info h3{font-size:1.1rem;line-height:1.35;min-height:3em}.product-info small{font-size:.73rem}.product-bottom{margin:16px 0}.product .favorite{top:20px;right:20px;background:white}.price{font-weight:900}.product:hover{box-shadow:0 14px 32px #31442314}
+.fresh-story{display:grid;grid-template-columns:1fr 1fr;margin-top:70px;background:var(--soft);border-radius:32px;overflow:hidden}.fresh-story-picture{position:relative;min-height:460px}.fresh-story-picture img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.fresh-story-picture span{position:absolute;bottom:24px;left:24px;right:24px;background:var(--cream);padding:20px;border-radius:16px;font-size:1.2rem;font-weight:700}.fresh-story-copy{padding:clamp(25px,4vw,58px)}.fresh-story-copy h2{margin:22px 0}.fresh-story-copy h2 em{color:var(--earth)}.story-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.story-tags span{border:1px solid var(--deep);border-radius:20px;padding:6px 11px;font-size:.75rem}
+.material-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.material-card{padding:24px;background:var(--aqua);border-radius:26px;color:var(--deep)}.material-card:nth-child(2){background:var(--soft)}.material-card:nth-child(3){background:white;border:1px solid var(--line)}.material-card img{display:block;width:100%;height:220px;object-fit:cover;border-radius:16px;margin:20px 0}.material-number{font-size:.72rem;font-weight:900;letter-spacing:.12em}.material-card h3{font-size:1.5rem;line-height:1.15}.material-card p{font-size:.95rem}.material-card .text-link{display:block;margin-top:20px}
+.eco-feature{margin-top:70px;display:grid;grid-template-columns:1.1fr .9fr;background:var(--aqua);padding:48px;gap:48px;border-radius:32px;align-items:center}.eco-feature p{max-width:480px}.eco-feature h2{margin:20px 0}.eco-feature-image img{width:100%;max-height:310px;object-fit:cover;border-radius:24px}.eco-feature-image small{display:block;margin-top:6px;font-size:.7rem}
+.fresh-faq{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;margin-top:75px;padding:40px 0}.fresh-faq details{border-bottom:1px solid var(--soft);padding:20px 0}.fresh-faq summary{font-weight:700;cursor:pointer;padding:8px 0}.fresh-faq details p{margin-top:15px}.social-note{text-align:center;border-radius:32px;background:var(--soft);padding:60px 20px;margin:35px 0 65px}.social-note h2{margin:20px 0 28px}
+.detail{gap:48px}.detail-photo{border-radius:28px;overflow:hidden}.detail>div:last-child{padding:20px 0}.detail-cards{gap:18px;margin-top:40px}.detail-cards .panel{border-radius:22px;background:var(--soft);padding:28px}.detail-cards .panel:nth-child(3n+2){background:var(--aqua)}.detail-cards .panel:nth-child(3n){background:white}.detail-cards h3{font-size:1.35rem;margin-top:12px}.fresh-about>.lead{max-width:700px}.fresh-about .story-art{background:var(--aqua);border-radius:32px}.fresh-about .panel{border-radius:24px;background:var(--soft)}.fresh-about .panel:nth-child(3n+2){background:var(--aqua)}.fresh-about .panel:nth-child(3n){background:white}
+html.contrast .material-card,html.contrast .eco-feature,html.contrast .fresh-story,html.contrast .social-note,html.contrast .brand-ribbon,html.contrast .animal,html.contrast .detail-cards .panel,html.contrast .fresh-about .panel{background:#000!important;color:#fff!important;border:1px solid #fff}html.contrast .fresh-copy h1 span{color:#fff}
+@media(max-width:900px){.fresh-hero{gap:20px}.fresh-copy h1{font-size:3.2rem}.fresh-photos img{height:310px}.hero-small-photo img{height:210px}.round-note{width:110px;height:110px;font-size:.6rem}.round-note strong{font-size:1.2rem}.material-grid{gap:12px}.material-card{padding:18px}.eco-feature{padding:30px;gap:24px}.fresh-faq{gap:30px}.brand-ribbon{font-size:.85rem}.section-head{align-items:start}}
+@media(max-width:650px){.fresh-hero,.fresh-story,.eco-feature,.fresh-faq{grid-template-columns:1fr}.fresh-hero{padding-top:16px;gap:0}.fresh-copy h1{font-size:clamp(2.6rem,11vw,4rem)}.fresh-copy .eyebrow{font-size:.65rem}.fresh-copy>p{font-size:1.05rem}.hero-footnote{margin-top:25px;font-size:.7rem;gap:8px}.fresh-photos{padding-top:15px;max-width:480px;width:100%;margin:auto}.fresh-photos img{height:290px}.hero-small-photo img{height:190px}.round-note{top:0;right:6px}.brand-ribbon{flex-wrap:wrap;gap:8px 18px;padding:20px;font-size:.8rem}.brand-ribbon b:last-of-type{display:none}.animal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.animal{padding:12px;display:flex;align-items:center;gap:12px;text-align:left;font-size:.85rem}.animal span{font-size:1.8rem}.section{padding-top:40px}.section-head{flex-direction:column;gap:15px}.material-grid{grid-template-columns:1fr}.material-card img{height:240px}.fresh-story{margin-top:35px}.fresh-story-picture{min-height:340px}.eco-feature{margin-top:40px;padding:24px}.fresh-faq{margin-top:35px;gap:15px}.social-note{margin-bottom:40px;padding:40px 20px}.product-info{padding:14px}.product-info h3{font-size:1rem}.product .btn{font-size:.8rem;padding:10px;white-space:normal}.product .favorite{top:14px;right:14px}.detail{gap:22px}.detail-cards{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.animal{transition:none}.animal:hover{transform:none}}
+
+</style>
+<style>
+
+/* Pagamento simples e adaptação a telas pequenas. */
+.payment-heading { display:flex; justify-content:space-between; gap:20px; align-items:start; margin-bottom:24px; }
+.payment-heading h2 { font-size:clamp(1.6rem,3vw,2.3rem); margin:8px 0 0; }
+.payment-total { flex-shrink:0; text-align:right; }
+.payment-total span { display:block; font-size:.8rem; }
+.payment-total strong { display:block; font-size:1.6rem; }
+.payment-methods { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.payment-methods .btn { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; text-align:left; border-radius:18px; white-space:normal; padding:18px; gap:4px; }
+.payment-methods strong { font-size:1.15rem; }
+.payment-methods small { font-size:.78rem; font-weight:400; line-height:1.4; }
+.payment-methods [aria-pressed="true"] { outline:2px solid var(--deep); outline-offset:3px; }
+.pix-panel { margin-top:24px; padding:24px 12px; background:var(--cream); border-radius:22px; text-align:center; }
+.card-short-fields { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+#demo-card { margin-top:24px; }
+.pay-submit { width:100%; min-height:54px; }
+.payment-summary { border:1px solid var(--line); border-radius:20px; align-self:start; background:white; }
+.payment-summary>summary { padding:20px; cursor:pointer; font-weight:700; }
+.payment-summary .summary { position:static; border:0; margin:0; box-shadow:none; }
+.checkout-page .steps { flex-wrap:wrap; }
+.checkout-page .cart-layout>* { min-width:0; }
+input,select,textarea { max-width:100%; }
+@media(max-width:760px) {
+ .checkout-page .cart-layout { display:flex; flex-direction:column; gap:20px; }
+ .checkout-page .cart-layout>* { width:100%; }
+ .checkout-page .summary { position:static; }
+ .checkout-page h1 { font-size:2rem; }
+ .checkout-page .steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+ .checkout-page .steps li { font-size:.72rem; padding:10px 6px; min-width:0; overflow-wrap:anywhere; }
+ .checkout-page .panel { padding:20px; }
+ .checkout-page input,.auth input,.checkout-page select { font-size:16px; min-height:48px; width:100%; }
+ .checkout-page .buttons .btn { flex:1; min-height:48px; white-space:normal; }
+ .payment-heading { flex-direction:column; gap:16px; }
+ .payment-total { text-align:left; display:flex; align-items:center; justify-content:space-between; width:100%; padding:14px; border-radius:12px; background:var(--soft); }
+ .payment-methods .btn { padding:16px 12px; min-height:92px; }
+ .payment-methods small { font-size:.75rem; }
+ .payment-summary { order:2; }
+ .auth { padding:24px 20px; margin:24px auto; width:100%; }
+ .header-actions { min-width:0; flex-wrap:wrap; }
+ .header-actions .icon { width:44px; min-width:44px; height:44px; }
+ .account-menu { max-width:100%; }
+ .account-link span { overflow-wrap:anywhere; }
+ .cart-row { min-width:0; }
+ .cart-row h3,.total-line { overflow-wrap:anywhere; }
+}
+@media(max-width:380px) {
+ .container { width:calc(100% - 24px); }
+ .header-top { grid-template-columns:50px minmax(0,1fr); gap:8px; }
+ .brand img { width:48px; height:54px; }
+ .header-actions .icon { width:40px; min-width:40px; }
+ .payment-panel { padding:16px!important; }
+ .card-short-fields { gap:10px; }
+ .payment-total strong { font-size:1.4rem; }
+}
+
+</style>
+<style>
+
+/* Abertura com fotografia inteira, sem selo ou recortes decorativos. */
+.welcome-hero { display:grid; grid-template-columns:1fr .9fr; gap:clamp(24px,5vw,72px); align-items:center; padding:38px 0 48px; }
+.welcome-copy { padding:24px 0; }
+.welcome-copy h1 { font-size:clamp(2.6rem,5vw,4.6rem); line-height:1.08; margin:22px 0; }
+.welcome-copy h1 span { color:var(--eco); }
+.welcome-copy>p { font-size:1.14rem; max-width:460px; margin:24px 0 30px; }
+.welcome-photo { display:block; width:100%; max-width:470px; justify-self:end; border-radius:18px; overflow:hidden; background:var(--soft); }
+.welcome-photo img { display:block; width:100%; height:auto; }
+.collection-overview { margin-top:64px; }
+.collection-overview img { display:block; width:100%; height:auto; border-radius:16px; }
+html.contrast .welcome-copy h1 span { color:white; }
+@media(max-width:760px) {
+ .welcome-hero { grid-template-columns:1fr; gap:12px; padding:22px 0 32px; }
+ .welcome-copy { padding:0; }
+ .welcome-copy h1 { font-size:clamp(2.4rem,9.5vw,4rem); }
+ .welcome-copy>p { font-size:1rem; }
+ .welcome-photo { justify-self:center; max-width:430px; }
+ .welcome-copy .buttons { gap:18px; margin-bottom:16px; }
+ .collection-overview { margin-top:40px; }
+}
+
+</style>
+<style>
+.ecotroca-layout {display:grid;grid-template-columns:minmax(0,2fr) minmax(250px,1fr);gap:30px;margin-top:35px;align-items:start}
+.ecotroca-fields {display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ecotroca-benefit {background:var(--soft);border-radius:24px}
+.ecotroca-previews {display:flex;flex-wrap:wrap;gap:12px}
+.ecotroca-previews img {width:110px;height:110px;object-fit:contain;border:1px solid var(--line);border-radius:12px;background:white}
+.ecotroca-page input,.ecotroca-page select,.ecotroca-page textarea {min-width:0;width:100%;font-size:16px}
+.ecotroca-page input[type=checkbox] {width:auto}
+@media(max-width:760px){.ecotroca-layout,.ecotroca-fields{grid-template-columns:1fr}.ecotroca-page .panel{padding:20px}.ecotroca-page input,.ecotroca-page select{min-height:48px}.ecotroca-page input[type=checkbox]{min-height:24px}.ecotroca-page .btn{width:100%;min-height:48px}}
+</style></head>
+  <body>
+    <a class="skip" href="#main">Pular para o conteúdo</a>
+    <div id="environment" class="environment"></div>
+    <header id="header"></header>
+    <main id="main" tabindex="-1">
+      <div class="loading" role="status">Preparando a EcoPet…</div>
+    </main>
+    <footer id="footer"></footer>
+    <button
+      id="access-open"
+      class="access-open"
+      aria-label="Abrir acessibilidade"
+      aria-haspopup="dialog"
+      title="Acessibilidade"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="4" r="2" />
+        <path d="M3 8l9 2 9-2M12 10v6m0-3-5 8m5-8 5 8" />
+      </svg>
+    </button>
+    <dialog id="access-panel" aria-labelledby="access-title"></dialog>
+    <dialog id="image-zoom" aria-label="Imagem ampliada">
+      <button class="icon close" data-close-dialog aria-label="Fechar imagem">
+        ×</button
+      ><img alt="" id="zoom-photo" />
+    </dialog>
+    <div id="toasts" role="status" aria-live="polite" aria-atomic="true"></div>
+    <noscript
+      >Ative JavaScript para utilizar o catálogo e a conta EcoPet.</noscript
+    >
+  <!-- DADOS EDITÁVEIS: produtos e informações EcoPet -->
+<script>
+window.ECOPET_DADOS = {
+  "products": [
+    {
+      "id": "eco-01",
+      "name": "Brinquedo de corda com retalhos",
+      "animal": "Cachorros",
+      "category": "Brinquedos",
+      "price": 1990,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.178Z",
+      "description": "Proposta EcoPet: brinquedo de corda com retalhos, desenvolvida para a categoria cachorros.",
+      "materials": "Corda e retalhos. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Corda",
+        "retalhos"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/produto-oficial-01.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-02",
+      "name": "Ratinho de tecido com retalhos",
+      "animal": "Gatos",
+      "category": "Brinquedos",
+      "price": 1490,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.180Z",
+      "description": "Proposta EcoPet: ratinho de tecido com retalhos, desenvolvida para a categoria gatos.",
+      "materials": "Tecido e retalhos. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Tecido",
+        "retalhos"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/ratinho-novo.png",
+        "assets/produto-oficial-02.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-03",
+      "name": "Poleiro com retalhos",
+      "animal": "Pássaros",
+      "category": "Acessórios",
+      "price": 2490,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.180Z",
+      "description": "Proposta EcoPet: poleiro com retalhos, desenvolvida para a categoria pássaros.",
+      "materials": "Retalhos; estrutura a confirmar. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Retalhos; estrutura a confirmar"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/produto-oficial-03.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-04",
+      "name": "Casinha de papelão e retalhos",
+      "animal": "Hamsters",
+      "category": "Abrigos",
+      "price": 2990,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.181Z",
+      "description": "Proposta EcoPet: casinha de papelão e retalhos, desenvolvida para a categoria hamsters.",
+      "materials": "Papelão e retalhos. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Papelão",
+        "retalhos"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/produto-oficial-04.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-05",
+      "name": "Enfeite para aquário com materiais reutilizados",
+      "animal": "Peixes",
+      "category": "Acessórios",
+      "price": 2490,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.182Z",
+      "description": "Proposta EcoPet: enfeite para aquário com materiais reutilizados, desenvolvida para a categoria peixes.",
+      "materials": "Materiais a confirmar. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Materiais a confirmar"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/produto-oficial-05.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-06",
+      "name": "Brinquedo roedor de papelão e tecido",
+      "animal": "Coelhos",
+      "category": "Brinquedos",
+      "price": 1990,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.182Z",
+      "description": "Proposta EcoPet: brinquedo roedor de papelão e tecido, desenvolvida para a categoria coelhos.",
+      "materials": "Papelão e tecido. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Papelão",
+        "tecido"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/produto-oficial-06.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-07",
+      "name": "Plataforma de descanso com materiais reciclados",
+      "animal": "Tartarugas",
+      "category": "Acessórios",
+      "price": 3990,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.183Z",
+      "description": "Proposta EcoPet: plataforma de descanso com materiais reciclados, desenvolvida para a categoria tartarugas.",
+      "materials": "Materiais a confirmar. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Materiais a confirmar"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/produto-oficial-07.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-08",
+      "name": "Rede feita com retalhos",
+      "animal": "Furões",
+      "category": "Descanso",
+      "price": 3490,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.183Z",
+      "description": "Proposta EcoPet: rede feita com retalhos, desenvolvida para a categoria furões.",
+      "materials": "Retalhos. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Retalhos"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/furao-rede.jpeg",
+        "assets/produto-oficial-08.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-09",
+      "name": "Tapete de enriquecimento com retalhos",
+      "animal": "Pequenos mamíferos",
+      "category": "Enriquecimento",
+      "price": 4490,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.184Z",
+      "description": "Proposta EcoPet: tapete de enriquecimento com retalhos, desenvolvida para a categoria pequenos mamíferos.",
+      "materials": "Retalhos. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Retalhos"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/tapete-novo.jpeg",
+        "assets/produto-oficial-09.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    },
+    {
+      "id": "eco-10",
+      "name": "Esconderijo com materiais reaproveitados",
+      "animal": "Répteis",
+      "category": "Abrigos",
+      "price": 3490,
+      "stock": 0,
+      "active": 1,
+      "approved": 0,
+      "created_at": "2026-10-19T02:42:38.184Z",
+      "description": "Proposta EcoPet: esconderijo com materiais reaproveitados, desenvolvida para a categoria répteis.",
+      "materials": "Materiais a confirmar. Composição exata e acabamento ainda precisam ser confirmados pela EcoPet.",
+      "materialTags": [
+        "Materiais a confirmar"
+      ],
+      "benefits": "Propõe dar uma nova utilidade a materiais que poderiam ser descartados.",
+      "care": "Antes do uso, a EcoPet precisa confirmar materiais, medidas, acabamento e adequação à espécie. Inspecione o desgaste e retire o item se houver partes soltas. Limpeza específica ainda não cadastrada.",
+      "specifications": "Medidas, peso, conservação e prazo de produção aguardando cadastro.",
+      "images": [
+        "assets/produto-oficial-10.jpg"
+      ],
+      "imageNote": "Imagem de referência preservada do catálogo EcoPet. Não comprova segurança ou composição.",
+      "variants": [],
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "productionDays": null,
+      "translations": {},
+      "safetyNote": ""
+    }
+  ],
+  "config": {
+    "mode": "demo",
+    "commerce": false,
+    "emailConfigured": false,
+    "company": {
+      "name": "EcoPet",
+      "instagram": "https://www.instagram.com/ecopet.oficial0/",
+      "email": "",
+      "phone": "",
+      "cnpj": "",
+      "address": "",
+      "tiktok": ""
+    },
+    "ecotroca": {
+      "active": false,
+      "rules": "O regulamento, os materiais aceitos e os benefícios serão publicados após definição pela EcoPet."
+    },
+    "banner": {
+      "title": "Amor que cuida, escolhas que transformam.",
+      "text": "Conheça produtos sustentáveis e criativos, feitos com carinho e materiais reaproveitados para diferentes tipos de pets."
+    },
+    "policies": {
+      "privacy": "",
+      "terms": "",
+      "delivery": "",
+      "returns": ""
+    },
+    "categories": [
+      "Brinquedos",
+      "Acessórios",
+      "Abrigos",
+      "Descanso",
+      "Enriquecimento"
+    ]
+  }
+};
+</script>
+<!-- FUNCIONAMENTO DO SITE: não precisa instalar nada -->
+<script>
+(() => {
+  var __create = Object.create;
+  var __defProp = Object.defineProperty;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getProtoOf = Object.getPrototypeOf;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
+    get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
+  }) : x)(function(x) {
+    if (typeof require !== "undefined") return require.apply(this, arguments);
+    throw Error('Dynamic require of "' + x + '" is not supported');
+  });
+  var __copyProps = (to, from, except, desc) => {
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (let key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(to, key) && key !== except)
+          __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+    }
+    return to;
+  };
+  var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+    // If the importer is in node compatibility mode or this is not an ESM
+    // file that has been converted to a CommonJS file using a Babel-
+    // compatible transform (i.e. "__esModule" has not been set), then set
+    // "default" to the CommonJS "module.exports" for node compatibility.
+    isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+    mod
+  ));
+
+  // simples-src/core.js
+  var $ = (selector) => document.querySelector(selector);
+  var e = (value) => String(value ?? "").replace(
+    /[&<>"']/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]
+  );
+  function load(key, fallback) {
+    try {
+      return JSON.parse(localStorage.getItem(key)) ?? fallback;
+    } catch {
+      return fallback;
+    }
+  }
+  function save(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch {
+    }
+  }
+  var state = {
+    user: null,
+    config: null,
+    products: [],
+    cart: load("ecopet-cart-v2", []),
+    favorites: load("ecopet-favorites-v2", []),
+    localNotifications: load("ecopet-notifications-v2", []),
+    language: load("ecopet-language", "pt-BR")
+  };
+  var money = (n) => (n / 100).toLocaleString(state.language, {
+    style: "currency",
+    currency: "BRL"
+  });
+  var date = (s) => new Date(s).toLocaleString(state.language);
+  async function api(path, method = "GET", body) {
+    const data = window.ECOPET_DADOS;
+    if (path === "/config") return structuredClone(data.config);
+    if (path === "/products") return structuredClone(data.products);
+    if (path === "/session") return { user: load("ecopet-local-active", false) ? localProfile() : null };
+    if (path === "/reviews" && method === "GET") return [];
+    if (path === "/cart/preview" && method === "POST") {
+      const coupon = String(body.coupon || "").trim().toUpperCase();
+      if (coupon === "CUPETE10" && state.user && demoOrders.some(o=>o.customer === state.user.name)) throw new Error("CUPETE10 vale apenas para o primeiro pedido deste perfil.");
+      if (coupon && coupon !== "CUPETE10") throw new Error("Cupom n\xE3o encontrado. Use CUPETE10 para 10% na primeira compra.");
+      const subtotal = body.items.reduce((total, item) => {
+        const p = data.products.find((p2) => p2.id === item.id);
+        if (!p || !Number.isInteger(item.quantity) || item.quantity < 1 || item.quantity > 99) throw new Error("Confira os itens do carrinho.");
+        return total + p.price * item.quantity;
+      }, 0);
+      return { subtotal, discount: coupon === "CUPETE10" ? Math.round(subtotal * 0.1) : 0 };
+    }
+    throw new Error("Esta fun\xE7\xE3o precisa da loja conectada a um servidor online. O arquivo index.html n\xE3o faz login, cota\xE7\xE3o ou cobran\xE7a real.");
+  }
+  var toastTimer;
+  function toast(message, record = false) {
+    $("#toasts").textContent = message;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => $("#toasts").textContent = "", 4500);
+    if (record) {
+      state.localNotifications.unshift({
+        id: crypto.randomUUID(),
+        message,
+        created_at: (/* @__PURE__ */ new Date()).toISOString(),
+        read: 0
+      });
+      state.localNotifications = state.localNotifications.slice(0, 40);
+      save("ecopet-notifications-v2", state.localNotifications);
+    }
+  }
+  function persistCart() {
+    save("ecopet-cart-v2", state.cart);
+    document.dispatchEvent(new Event("cartchange"));
+  }
+  function field(label, name, type = "text", value = "", extra = "") {
+    return (
+      /* HTML */
+      `<label class="field"
+    >${e(t(label))}<input
+      type="${type}"
+      name="${name}"
+      value="${e(value)}"
+      ${extra}
+  /></label>`
+    );
+  }
+  function errorBox() {
+    return '<div class="notice error" role="alert" data-error></div>';
+  }
+  function setError(form, error) {
+    const box = form.querySelector("[data-error]");
+    if (box) {
+      box.textContent = error.message;
+      box.tabIndex = -1;
+      box.focus();
+    } else toast(error.message);
+  }
+  function formData(form) {
+    return Object.fromEntries(new FormData(form));
+  }
+  function icon(name) {
+    const paths = {
+      search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+      user: '<circle cx="12" cy="8" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/>',
+      heart: '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>',
+      cart: '<path d="M3 3h2l3 12h11l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/>',
+      bell: '<path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>',
+      leaf: '<path d="M20 3C4 1 1 9 5 16s16 4 15-13ZM5 20 16 8"/>',
+      arrow: '<path d="M4 12h16m-6-6 6 6-6 6"/>',
+      box: '<path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm-9 5 9 5 9-5M12 12v10M7 4l10 6"/>',
+      check: '<path d="m4 12 5 5L20 6"/>',
+      plus: '<path d="M12 5v14M5 12h14"/>',
+      trash: '<path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/>',
+      recycle: '<path d="m8 5 4-3 5 8m-4-1 4 1 2-4M20 13l1 5H10m3-3-3 3 3 3M6 18l-4-3 5-8m0 4V7H3"/>'
+    };
+    return (
+      /* HTML */
+      `<svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    ${paths[name] || paths.leaf}
+  </svg>`
+    );
+  }
+  var dictionary = {
+    In\u00EDcio: ["Home", "Inicio"],
+    Produtos: ["Products", "Productos"],
+    Categorias: ["Categories", "Categor\xEDas"],
+    "Sobre n\xF3s": ["About us", "Nosotros"],
+    Sustentabilidade: ["Sustainability", "Sostenibilidad"],
+    Contato: ["Contact", "Contacto"],
+    "Entrar / Criar conta": ["Sign in / Register", "Entrar / Crear cuenta"],
+    "Minha conta": ["My account", "Mi cuenta"],
+    "Meus pedidos": ["My orders", "Mis pedidos"],
+    "Meus endere\xE7os": ["My addresses", "Mis direcciones"],
+    Favoritos: ["Favorites", "Favoritos"],
+    Sair: ["Sign out", "Salir"],
+    "Pesquisar produtos": ["Search products", "Buscar productos"],
+    "Explorar produtos": ["Explore products", "Explorar productos"],
+    "Conhecer a EcoPet": ["Meet EcoPet", "Conocer EcoPet"],
+    "Ver detalhes": ["View details", "Ver detalles"],
+    "Adicionar ao carrinho": ["Add to cart", "A\xF1adir al carrito"],
+    "Comprar agora": ["Buy now", "Comprar ahora"],
+    "Continuar comprando": ["Continue shopping", "Seguir comprando"],
+    "Finalizar compra": ["Checkout", "Finalizar compra"],
+    "Todos os produtos": ["All products", "Todos los productos"],
+    Todos: ["All", "Todos"],
+    "Tipo de animal": ["Animal type", "Tipo de animal"],
+    Categoria: ["Category", "Categor\xEDa"],
+    Material: ["Material", "Material"],
+    Disponibilidade: ["Availability", "Disponibilidad"],
+    Dispon\u00EDvel: ["Available", "Disponible"],
+    "Pre\xE7o m\xE1ximo": ["Maximum price", "Precio m\xE1ximo"],
+    "Menor pre\xE7o": ["Lowest price", "Menor precio"],
+    "Maior pre\xE7o": ["Highest price", "Mayor precio"],
+    "Ordem alfab\xE9tica": ["Alphabetical order", "Orden alfab\xE9tico"],
+    Novidades: ["New arrivals", "Novedades"],
+    "Aplicar filtros": ["Apply filters", "Aplicar filtros"],
+    "Limpar filtros": ["Clear filters", "Borrar filtros"],
+    "Nome completo": ["Full name", "Nombre completo"],
+    "E-mail": ["Email", "Correo electr\xF3nico"],
+    Telefone: ["Phone", "Tel\xE9fono"],
+    Senha: ["Password", "Contrase\xF1a"],
+    "Confirmar senha": ["Confirm password", "Confirmar contrase\xF1a"],
+    Entrar: ["Sign in", "Entrar"],
+    "Criar conta": ["Create account", "Crear cuenta"],
+    "Esqueci minha senha": ["Forgot password", "Olvid\xE9 mi contrase\xF1a"],
+    Salvar: ["Save", "Guardar"],
+    Cancelar: ["Cancel", "Cancelar"],
+    Voltar: ["Back", "Volver"],
+    Continuar: ["Continue", "Continuar"],
+    Carrinho: ["Cart", "Carrito"],
+    Subtotal: ["Subtotal", "Subtotal"],
+    Frete: ["Shipping", "Env\xEDo"],
+    Desconto: ["Discount", "Descuento"],
+    Total: ["Total", "Total"],
+    Quantidade: ["Quantity", "Cantidad"],
+    "Cupom de desconto": ["Discount code", "C\xF3digo de descuento"],
+    Aplicar: ["Apply", "Aplicar"],
+    "Consultar frete": ["Calculate shipping", "Calcular env\xEDo"],
+    CEP: ["Postal code", "C\xF3digo postal"],
+    Rua: ["Street", "Calle"],
+    N\u00FAmero: ["Number", "N\xFAmero"],
+    Complemento: ["Additional information", "Complemento"],
+    Bairro: ["District", "Barrio"],
+    Cidade: ["City", "Ciudad"],
+    Estado: ["State", "Estado"],
+    "Salvar endere\xE7o": ["Save address", "Guardar direcci\xF3n"],
+    Identifica\u00E7\u00E3o: ["Identification", "Identificaci\xF3n"],
+    Endere\u00E7o: ["Address", "Direcci\xF3n"],
+    Entrega: ["Delivery", "Entrega"],
+    Revis\u00E3o: ["Review", "Revisi\xF3n"],
+    Pagamento: ["Payment", "Pago"],
+    Confirma\u00E7\u00E3o: ["Confirmation", "Confirmaci\xF3n"],
+    Notifica\u00E7\u00F5es: ["Notifications", "Notificaciones"],
+    "Marcar como lida": ["Mark as read", "Marcar como le\xEDda"],
+    "Sobre o produto": ["About the product", "Sobre el producto"],
+    "Materiais utilizados": ["Materials", "Materiales"],
+    Vantagens: ["Benefits", "Ventajas"],
+    "Desvantagens e cuidados": [
+      "Limitations and care",
+      "Limitaciones y cuidados"
+    ],
+    "Informa\xE7\xF5es adicionais": ["Additional information", "Informaci\xF3n adicional"],
+    Cachorros: ["Dogs", "Perros"],
+    Gatos: ["Cats", "Gatos"],
+    P\u00E1ssaros: ["Birds", "Aves"],
+    Hamsters: ["Hamsters", "H\xE1msteres"],
+    Coelhos: ["Rabbits", "Conejos"],
+    Peixes: ["Fish", "Peces"],
+    Tartarugas: ["Turtles", "Tortugas"],
+    Fur\u00F5es: ["Ferrets", "Hurones"],
+    "Pequenos mam\xEDferos": ["Small mammals", "Peque\xF1os mam\xEDferos"],
+    R\u00E9pteis: ["Reptiles", "Reptiles"],
+    "Pol\xEDtica de privacidade": ["Privacy policy", "Pol\xEDtica de privacidad"],
+    "Termos de uso": ["Terms of use", "T\xE9rminos de uso"],
+    "Pol\xEDtica de entrega": ["Delivery policy", "Pol\xEDtica de entrega"],
+    "Trocas e devolu\xE7\xF5es": ["Returns and exchanges", "Cambios y devoluciones"],
+    "Formas de pagamento": ["Payment methods", "M\xE9todos de pago"],
+    "Fale conosco": ["Contact us", "Cont\xE1ctanos"],
+    "D\xFAvidas frequentes": ["Frequently asked questions", "Preguntas frecuentes"],
+    "Acompanhar pedido": ["Track order", "Seguir pedido"],
+    "Produto adicionado ao carrinho": [
+      "Product added to cart",
+      "Producto a\xF1adido al carrito"
+    ],
+    "Produto salvo nos favoritos": [
+      "Product saved to favorites",
+      "Producto guardado en favoritos"
+    ]
+  };
+  function t(s) {
+    return state.language === "pt-BR" ? s : dictionary[s]?.[state.language === "en" ? 0 : 1] || s;
+  }
+  function translated(p, k) {
+    return state.language === "pt-BR" ? p[k] : p.translations?.[state.language]?.[k] || p[k];
+  }
+  var statusLabel = {
+    pending: "Aguardando pagamento",
+    paid: "Pagamento aprovado",
+    production: "Em produ\xE7\xE3o / separa\xE7\xE3o",
+    packed: "Embalado",
+    shipped: "Enviado",
+    delivered: "Entregue",
+    cancelled: "Cancelado",
+    refunded: "Reembolsado",
+    chargeback: "Pagamento contestado",
+    approved: "Pagamento aprovado",
+    rejected: "Pagamento recusado",
+    in_process: "Verificando pagamento",
+    creating: "Consultando provedor"
+  };
+  var temporarySession = /* @__PURE__ */ new Map();
+  var safeSession = {
+    getItem(key) {
+      try {
+        return window.sessionStorage.getItem(key) ?? temporarySession.get(key) ?? null;
+      } catch {
+        return temporarySession.get(key) ?? null;
+      }
+    },
+    setItem(key, value) {
+      temporarySession.set(key, String(value));
+      try {
+        window.sessionStorage.setItem(key, value);
+      } catch {
+      }
+    },
+    removeItem(key) {
+      temporarySession.delete(key);
+      try {
+        window.sessionStorage.removeItem(key);
+      } catch {
+      }
+    }
+  };
+  var temporaryProfile = null;
+  function localProfile() {
+    const profile = load("ecopet-local-profile", temporaryProfile);
+    return profile && typeof profile.name === "string" && profile.name.trim() ? { name: profile.name, role: "local", local: true } : null;
+  }
+  function updateLocalProfile(name) {
+    name = String(name || "").trim().replace(/\s+/g, " ");
+    if (name.length < 2 || name.length > 100) throw new Error("Digite um nome entre 2 e 100 caracteres.");
+    temporaryProfile = { name, role: "local", local: true };
+    state.user = temporaryProfile;
+    save("ecopet-local-profile", temporaryProfile);
+    save("ecopet-local-active", true);
+    try {
+      return localStorage.getItem("ecopet-local-profile") !== null;
+    } catch {
+      return false;
+    }
+  }
+
+  // simples-src/storefront.js
+  var animals = [
+    "Cachorros",
+    "Gatos",
+    "P\xE1ssaros",
+    "Hamsters",
+    "Coelhos",
+    "Peixes",
+    "Tartarugas",
+    "Fur\xF5es",
+    "Pequenos mam\xEDferos",
+    "R\xE9pteis"
+  ];
+  var symbols = ["\u{1F415}", "\u{1F408}", "\u{1F99C}", "\u{1F439}", "\u{1F407}", "\u{1F420}", "\u{1F422}", "\u{1F9A6}", "\u{1F401}", "\u{1F98E}"];
+  function animalGrid() {
+    return (
+      /* HTML */
+      `<div class="animal-grid">
+    ${animals.map(
+        (a, i) => `<a class="animal" href="#/produtos?animal=${encodeURIComponent(a)}"><span aria-hidden="true">${symbols[i]}</span>${e(t(a))}</a>`
+      ).join("")}
+  </div>`
+    );
+  }
+  function card(p) {
+    const favorite = state.favorites.includes(p.id);
+    return (
+      /* HTML */
+      `<article class="product">
+    <div class="product-media">
+      <a href="#/produto/${p.id}"
+        ><img
+          src="${e(p.images[0] || "assets/logo-ecopet.png")}"
+          alt="${e(translated(p, "name"))}"
+          loading="lazy"
+      /></a>
+      <button
+        class="icon favorite"
+        data-favorite="${p.id}"
+        aria-pressed="${favorite}"
+        aria-label="${favorite ? "Remover dos favoritos" : "Favoritar"} ${e(
+        p.name
+      )}"
+      >
+        ${icon("heart")}
+      </button>
+    </div>
+    <div class="product-info">
+      <span class="eyebrow">${e(t(p.animal))}</span>
+      <h3><a href="#/produto/${p.id}">${e(translated(p, "name"))}</a></h3>
+      <small
+        >${p.approved && p.stock > 0 ? "Dispon\xEDvel" : "Venda aguardando confirma\xE7\xE3o"}</small
+      >
+      <div class="product-bottom">
+        <strong class="price">${money(p.price)}</strong
+        ><a
+          class="icon"
+          href="#/produto/${p.id}"
+          aria-label="${e(t("Ver detalhes"))}: ${e(p.name)}"
+          >${icon("arrow")}</a
+        >
+      </div>
+      <button class="btn small" data-add="${p.id}">
+        ${icon("plus")}${t("Adicionar ao carrinho")}
+      </button>
+    </div>
+  </article>`
+    );
+  }
+  function home() {
+    return `<div class="container new-home">
+      <section class="welcome-hero">
+        <div class="welcome-copy"><span class="eyebrow">BEM-VINDO À ECOPET</span><h1>Amor que cuida,<br><span>escolhas que<br>transformam.</span></h1><p>Brinquedos e acessórios que unem carinho pelos pets, criatividade e um novo olhar para os materiais.</p><div class="buttons"><a class="btn" href="#/produtos">Conheça nossos produtos ${icon('arrow')}</a><a class="text-link" href="#/sobre">Sobre a EcoPet ↗</a></div></div>
+        <a class="welcome-photo" href="#/produto/eco-08" aria-label="Conhecer a rede feita com retalhos"><img src="assets/furao-rede.jpeg" alt="Furão descansando na rede de retalhos EcoPet" fetchpriority="high" width="1122" height="1402"></a>
+      </section>
+      <div class="brand-ribbon"><span>Mais vida para os materiais</span><b aria-hidden="true">✳</b><span>Mais carinho para os pets</span><b aria-hidden="true">✳</b><span>Esse é o jeito EcoPet</span></div>
+      <section class="section pet-section"><div class="section-head"><div><span class="eyebrow">CADA PET, UM UNIVERSO</span><h2>Quem faz parte da sua família?</h2></div><a class="text-link" href="#/categorias">Todas as categorias ↗</a></div>${animalGrid()}</section>
+      <section class="section"><div class="section-head"><div><span class="eyebrow">DESCUBRA A ECOPET</span><h2>Carinho em forma de produto.</h2></div><a class="text-link" href="#/produtos">Explorar a coleção ↗</a></div><div class="grid">${state.products.slice(0,4).map(card).join('')}</div></section>
+      <section class="fresh-story"><div class="fresh-story-picture"><img src="assets/tapete-novo.jpeg" alt="Tapete de enriquecimento feito com retalhos" loading="lazy"><span>Novas histórias<br>começam com cuidado.</span></div><div class="fresh-story-copy"><span class="eyebrow">OI, SOMOS A ECOPET.</span><h2>O que seria descarte<br>pode virar <em>cuidado.</em></h2><p>Acreditamos que o amor pelos animais e a responsabilidade com o meio ambiente podem caminhar juntos.</p><p>É dessa ideia que nascem nossas propostas: transformar materiais reaproveitados em brinquedos e acessórios criativos para diferentes pets.</p><a class="btn" href="#/sobre">Conheça quem somos ${icon('arrow')}</a><div class="story-tags"><span>Consumo consciente</span><span>Criatividade</span><span>Respeito aos animais</span></div></div></section>
+      <section class="section"><div class="section-head"><div><span class="eyebrow">POR DENTRO DAS NOSSAS IDEIAS</span><h2>Materiais com novas possibilidades.</h2></div><p class="section-intro">Conheça as propostas do catálogo. Os detalhes e os cuidados de cada peça estão na página do produto.</p></div><div class="material-grid">
+        <a href="#/produto/eco-02" class="material-card"><span class="material-number">01 / TECIDO</span><img src="assets/ratinho-novo.png" alt="Ratinho feito com retalhos" loading="lazy"><h3>Retalhos que ganham vida.</h3><p>Uma proposta de brinquedo de tecido para gatos. Veja os materiais e os cuidados cadastrados.</p><span class="text-link">Conhecer o ratinho ↗</span></a>
+        <a href="#/produto/eco-04" class="material-card"><span class="material-number">02 / PAPELÃO</span><img src="assets/produto-oficial-04.jpg" alt="Casinha de papelão e retalhos" loading="lazy"><h3>Novas formas de reaproveitar.</h3><p>Papelão e retalhos inspiram a proposta de casinha. Confira as informações específicas para hamsters.</p><span class="text-link">Explorar a casinha ↗</span></a>
+        <a href="#/produto/eco-08" class="material-card"><span class="material-number">03 / NOVOS USOS</span><img src="assets/furao-rede.jpeg" alt="Rede de retalhos para furões" loading="lazy"><h3>Outra forma de acolher.</h3><p>Conheça a proposta de rede para furões, suas características e os cuidados de utilização.</p><span class="text-link">Ver a rede ↗</span></a>
+      </div></section>
+      <section class="eco-feature"><div><span class="eyebrow">CONHEÇA O PROJETO ECOTROCA</span><h2>O próximo capítulo<br>começa com você.</h2><p>Guardar, separar e reaproveitar. Solicite uma avaliação do seu produto e descubra se ele pode voltar para ser reaproveitado.</p><a class="btn" href="#/ecotroca">Descubra como participar ${icon('arrow')}</a></div><div class="eco-feature-image"><img src="assets/embalagens-novas.jpeg" alt="Referência visual de etiquetas e embalagens EcoPet" loading="lazy"><small>Referência de embalagens da marca.</small></div></section>
+      <section class="section"><div class="section-head"><div><span class="eyebrow">CONTINUE DESCOBRINDO</span><h2>Outras ideias para conhecer.</h2></div><a class="text-link" href="#/produtos">Ver os 10 produtos ↗</a></div><div class="grid">${state.products.slice(6,10).map(card).join('')}</div></section>
+      <section class="collection-overview"><div class="section-head"><div><span class="eyebrow">NOSSA COLEÇÃO</span><h2>Uma ideia para cada companhia.</h2></div><a class="text-link" href="#/produtos">Explorar produtos ↗</a></div><a href="#/produtos"><img src="assets/colecao-completa.jpeg" alt="Coleção EcoPet: propostas para cachorros, gatos, pássaros, hamsters, peixes, coelhos, tartarugas, furões, pequenos mamíferos e répteis" loading="lazy" width="1536" height="1024"></a></section>
+      <section class="fresh-faq"><div><span class="eyebrow">PODEMOS AJUDAR?</span><h2>Um cuidado também<br>com suas dúvidas.</h2><a class="text-link" href="#/contato">Fale com a EcoPet ↗</a></div><div>${[['Como escolher um produto para meu pet?','Comece pela categoria do animal. Na página de cada produto, confira a proposta, os materiais, as informações adicionais e os cuidados. A indicação de uso depende da confirmação da adequação à espécie.'],['Onde encontro os materiais utilizados?','Abra o produto e consulte o quadro Materiais utilizados. As informações ainda não confirmadas aparecem identificadas no cadastro.'],['Como funciona a EcoTroca?','O projeto propõe o retorno de embalagens e materiais aceitos pela empresa. Consulte a página EcoTroca para conhecer as regras disponíveis; benefícios dependem de campanha ativa.']].map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</div></section>
+      <section class="social-note"><span class="eyebrow">VAMOS CONTINUAR ESSA CONVERSA?</span><h2>Um pouquinho de EcoPet<br>no seu dia a dia.</h2><a class="btn secondary" href="https://www.instagram.com/ecopet.oficial0/" target="_blank" rel="noopener noreferrer">@ecopet.oficial0 ↗</a></section>
+    </div>`;
+  }
+  function catalog(params = new URLSearchParams(), favorites = false) {
+    let list = state.products.filter(
+      (p) => (!favorites || state.favorites.includes(p.id)) && (!params.get("animal") || p.animal === params.get("animal")) && (!params.get("category") || p.category === params.get("category")) && (!params.get("material") || p.materialTags.includes(params.get("material"))) && (!params.get("available") || p.approved && p.stock > 0) && (!params.get("max") || p.price <= Number(params.get("max")) * 100) && (!params.get("q") || `${p.name} ${p.animal}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(
+        params.get("q").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+      ))
+    );
+    const sort = params.get("sort");
+    list.sort(
+      sort === "price" ? (a, b) => a.price - b.price : sort === "price-desc" ? (a, b) => b.price - a.price : sort === "name" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.created_at.localeCompare(a.created_at)
+    );
+    const select = (label, name, values) => `<label class="field">${t(label)}<select name="${name}"><option value="">${t("Todos")}</option>${values.map((v) => `<option value="${e(v)}" ${params.get(name) === v ? "selected" : ""}>${e(t(v))}</option>`).join("")}</select></label>`;
+    return (
+      /* HTML */
+      `<section class="container section">
+    <span class="eyebrow">Cuidado para diferentes pets</span>
+    <h1>${t(favorites ? "Favoritos" : "Todos os produtos")}</h1>
+    <div class="catalog-layout">
+      <form id="filter-form" class="filters">
+        ${field(
+        "Pesquisar produtos",
+        "q",
+        "search",
+        params.get("q") || ""
+      )}${select("Tipo de animal", "animal", animals)}${select(
+        "Categoria",
+        "category",
+        [...new Set(state.products.map((p) => p.category))]
+      )}${select("Material", "material", [
+        ...new Set(state.products.flatMap((p) => p.materialTags))
+      ])}${field(
+        "Pre\xE7o m\xE1ximo",
+        "max",
+        "number",
+        params.get("max") || "",
+        'min="0" step="0.01"'
+      )}
+        <label class="check"
+          ><input
+            type="checkbox"
+            name="available"
+            value="1"
+            ${params.get("available") ? "checked" : ""}
+          />${t("Dispon\xEDvel")}</label
+        ><button class="btn">${t("Aplicar filtros")}</button
+        ><a href="#/produtos">${t("Limpar filtros")}</a>
+      </form>
+      <div>
+        <div class="catalog-top">
+          <span>${list.length} produto(s)</span
+          ><label
+            ><span class="sr-only">Ordenar</span
+            ><select class="control" id="sort-products">
+              ${[
+        ["new", "Novidades"],
+        ["price", "Menor pre\xE7o"],
+        ["price-desc", "Maior pre\xE7o"],
+        ["name", "Ordem alfab\xE9tica"]
+      ].map(
+        ([v, l]) => `<option value="${v}" ${sort === v ? "selected" : ""}>${t(l)}</option>`
+      ).join("")}
+            </select></label
+          >
+        </div>
+        <div class="grid">${list.map(card).join("")}</div>
+        ${list.length ? "" : '<div class="empty"><h2>Nenhum produto encontrado</h2><p>Experimente outro nome ou remova os filtros.</p></div>'}
+      </div>
+    </div>
+  </section>`
+    );
+  }
+  function detail(id) {
+    const p = state.products.find((p2) => p2.id === id);
+    if (!p)
+      return '<section class="container section"><h1>Produto n\xE3o encontrado</h1></section>';
+    const cards = [
+      ["Sobre o produto", "description"],
+      ["Materiais utilizados", "materials"],
+      ["Vantagens", "benefits"],
+      ["Desvantagens e cuidados", "care"],
+      ["Informa\xE7\xF5es adicionais", "specifications"]
+    ];
+    return (
+      /* HTML */
+      `<section class="container section">
+    <nav class="breadcrumbs" aria-label="Navega\xE7\xE3o estrutural">
+      <a href="#/produtos">${t("Produtos")}</a> / ${e(t(p.animal))}
+    </nav>
+    <div class="detail">
+      <div>
+        <button
+          class="detail-photo"
+          data-zoom="${e(p.images[0])}"
+          aria-label="Ampliar foto de ${e(p.name)}"
+        >
+          <img
+            id="product-main-image"
+            src="${e(p.images[0])}"
+            alt="${e(translated(p, "name"))}"
+          /></button
+        >${p.images.length > 1 ? `<div class="thumbnails">${p.images.map((src, i) => `<button data-thumbnail="${e(src)}" aria-label="Foto ${i + 1}"><img src="${e(src)}" alt="${e(p.name)} \u2014 foto ${i + 1}"></button>`).join("")}</div>` : ""}
+        <p class="muted">${e(p.imageNote)}</p>
+      </div>
+      <div>
+        <span class="eyebrow">${e(t(p.animal))} \xB7 ${e(p.category)}</span>
+        <h1>${e(translated(p, "name"))}</h1>
+        <p>${e(translated(p, "description"))}</p>
+        <div class="price">${money(p.price)}</div>
+        <p>
+          ${p.approved && p.stock > 0 ? `${p.stock} unidade(s) dispon\xEDvel(is)` : "Disponibilidade e adequa\xE7\xE3o \xE0 esp\xE9cie aguardando confirma\xE7\xE3o."}
+        </p>
+        ${p.variants.length ? `<label class="field">Varia\xE7\xE3o<select id="product-variant">${p.variants.map((v) => `<option>${e(v)}</option>`).join("")}</select></label>` : ""}
+        <div class="buttons">
+          <label class="quantity"
+            ><span class="sr-only">${t("Quantidade")}</span
+            ><button
+              type="button"
+              data-detail-qty="-1"
+              aria-label="Diminuir quantidade"
+            >
+              \u2212</button
+            ><input
+              type="number"
+              id="detail-quantity"
+              min="1"
+              max="99"
+              value="1"
+            /><button
+              type="button"
+              data-detail-qty="1"
+              aria-label="Aumentar quantidade"
+            >
+              +
+            </button></label
+          ><button
+            class="icon"
+            data-favorite="${p.id}"
+            aria-pressed="${state.favorites.includes(p.id)}"
+            aria-label="Favoritar produto"
+          >
+            ${icon("heart")}
+          </button>
+        </div>
+        <div class="buttons" style="margin-top:20px">
+          <button class="btn" data-add="${p.id}">
+            ${t("Adicionar ao carrinho")}</button
+          ><button class="btn secondary" data-buy="${p.id}">
+            ${t("Comprar agora")}
+          </button>
+        </div>
+        ${!p.approved ? '<div class="notice">Este produto ainda n\xE3o est\xE1 liberado para venda. Voc\xEA pode explorar o carrinho, mas a compra depende da confirma\xE7\xE3o dos materiais e da adequa\xE7\xE3o \xE0 esp\xE9cie.</div>' : ""}
+      </div>
+    </div>
+    <div class="detail-cards">
+      ${cards.map(
+        ([title, k]) => `<article class="panel"><span class="eyebrow">${String(cards.findIndex(c=>c[1]===k)+1).padStart(2,"0")} / ECOPET</span><h3>${t(title)}</h3><p>${e(translated(p, k))}</p></article>`
+      ).join("")}
+    </div>
+    <section class="section">
+      <div class="section-head"><div><span class="eyebrow">MAIS IDEIAS, MAIS CARINHO</span><h2>Você também pode conhecer</h2></div><a class="text-link" href="#/produtos">Ver todos ↗</a></div>
+      <p class="muted">Outras propostas do catálogo. Confira a espécie indicada em cada produto.</p>
+      <div class="grid">${state.products.filter(x=>x.id!==p.id).sort((a,b)=>Number(b.animal===p.animal)-Number(a.animal===p.animal)).slice(0,4).map(card).join('')}</div>
+    </section>
+  </section>`
+    );
+  }
+  function cart() {
+    const items = state.cart.map((i) => ({ ...i, p: state.products.find((p) => p.id === i.id) })).filter((i) => i.p);
+    if (!items.length)
+      return (
+        /* HTML */
+        `<section class="container section">
+      <h1>${t("Carrinho")}</h1>
+      <div class="empty">
+        <h2>Seu carrinho est\xE1 esperando uma boa escolha.</h2>
+        <p>Explore o cat\xE1logo e conhe\xE7a nossas propostas.</p>
+        <a class="btn" href="#/produtos">${t("Explorar produtos")}</a>
+      </div>
+    </section>`
+      );
+    const subtotal = items.reduce((s, i) => s + i.p.price * i.quantity, 0);
+    const coupon = safeSession.getItem("ecopet-coupon") || "";
+    const discount = demoTotals().discount;
+    return (
+      /* HTML */
+      `<section class="container section">
+    <span class="eyebrow">Suas escolhas</span>
+    <h1>${t("Carrinho")}</h1>
+    <div class="cart-layout">
+      <div>
+        ${items.map(
+        (i) => `<article class="cart-row"><a href="#/produto/${i.id}"><img src="${e(i.p.images[0])}" alt="${e(i.p.name)}"></a><div><h3>${e(i.p.name)}</h3><p>${e(i.variant || "Sem varia\xE7\xE3o")} \xB7 ${money(i.p.price)} cada</p><div class="cart-controls"><div class="quantity"><button data-cart-qty="${i.id}" data-change="-1" aria-label="Diminuir ${e(i.p.name)}">\u2212</button><span>${i.quantity}</span><button data-cart-qty="${i.id}" data-change="1" aria-label="Aumentar ${e(i.p.name)}">+</button></div><button class="icon" data-remove="${i.id}" aria-label="Remover ${e(i.p.name)}">${icon("trash")}</button></div></div><strong>${money(i.p.price * i.quantity)}</strong></article>`
+      ).join("")}
+        <div class="buttons" style="margin-top:24px">
+          <a class="btn secondary" href="#/produtos"
+            >${t("Continuar comprando")}</a
+          >
+        </div>
+      </div>
+      <aside class="panel summary">
+        <h3>Resumo da compra</h3>
+        <div class="total-line">
+          <span>${t("Subtotal")}</span><strong>${money(subtotal)}</strong>
+        </div>
+        <form id="coupon-form" class="form">
+          ${field(
+        "Cupom de desconto",
+        "coupon",
+        "text",
+        coupon,
+        'maxlength="40"'
+      )}<button class="btn secondary small">${t("Aplicar")}</button
+          >${errorBox()}
+          <div id="coupon-result" role="status">${discount ? `CUPETE10 · Desconto: ${money(discount)}` : 'CUPETE10: 10% na primeira compra.'}</div>
+        </form>
+        <form id="cart-shipping" class="form">
+          ${field(
+        "CEP",
+        "cep",
+        "text",
+        "",
+        'inputmode="numeric" pattern="[0-9-]{8,9}" required'
+      )}<button class="btn secondary small">${t("Consultar frete")}</button
+          >${errorBox()}
+          <div id="shipping-result" role="status">Frete fixo: R$ 15,00.</div>
+        </form>
+        <div class="total-line big">
+          <span>${t("Total")}</span
+          ><strong id="cart-total">${money(subtotal - discount + 1500)}</strong>
+        </div>
+        <p class="muted">
+          Frete fixo de R$ 15,00 incluído.
+        </p>
+        <a class="btn" href="#/checkout"
+          >${t("Finalizar compra")} ${icon("arrow")}</a
+        >
+      </aside>
+    </div>
+  </section>`
+    );
+  }
+  function about() {
+    return (
+      /* HTML */
+      `<section class="container section fresh-about">
+    <span class="eyebrow">Nossa hist\xF3ria</span>
+    <h1>Cuidar dos pets.<br />Repensar as escolhas.</h1>
+    <p class="lead">
+      A EcoPet surgiu com a proposta de unir o cuidado com os animais \xE0
+      responsabilidade ambiental.
+    </p>
+    <div class="story section">
+      <div>
+        <h2>Uma nova possibilidade<br />para cada material.</h2>
+        <p>
+          A empresa trabalha com a ideia de transformar materiais que poderiam
+          ser descartados em produtos \xFAteis, criativos e sustent\xE1veis.
+        </p>
+        <p>
+          Al\xE9m de atender c\xE3es e gatos, a EcoPet pretende oferecer solu\xE7\xF5es para
+          diferentes esp\xE9cies, valorizando a diversidade dos animais de
+          estima\xE7\xE3o.
+        </p>
+        <p>
+          A marca acredita que cuidar dos pets e cuidar do meio ambiente s\xE3o
+          atitudes que podem caminhar juntas.
+        </p>
+      </div>
+      <div class="story-art">
+        <img src="assets/logo-ecopet.png" alt="Logo oficial EcoPet" />
+      </div>
+    </div>
+    <div class="panels">
+      ${[
+        [
+          "Sustentabilidade",
+          "Reaproveitamos materiais e incentivamos escolhas mais conscientes."
+        ],
+        [
+          "Criatividade",
+          "Transformamos materiais simples em novas possibilidades."
+        ],
+        ["Cuidado", "Pensamos nos animais e nas necessidades de cada esp\xE9cie."],
+        [
+          "Diversidade",
+          "Desenvolvemos propostas para diferentes tipos de pets."
+        ],
+        [
+          "Qualidade",
+          "Buscamos produtos bem preparados, com aten\xE7\xE3o aos materiais e acabamentos."
+        ],
+        [
+          "Responsabilidade",
+          "Valorizamos o consumo consciente e o cuidado com as pessoas e com o meio ambiente."
+        ]
+      ].map(
+        ([a, b]) => `<article class="panel"><h3>${a}</h3><p>${b}</p></article>`
+      ).join("")}
+    </div>
+    <div class="panels section">
+      ${[
+        [
+          "Miss\xE3o",
+          "Criar produtos sustent\xE1veis e criativos para pets, reaproveitando materiais e incentivando escolhas mais conscientes."
+        ],
+        [
+          "Vis\xE3o",
+          "Ser reconhecida como uma marca que une sustentabilidade, qualidade, criatividade e cuidado com os animais."
+        ],
+        [
+          "Valores",
+          "Sustentabilidade, respeito aos animais, consumo consciente, criatividade, qualidade, responsabilidade, carinho e cuidado."
+        ]
+      ].map(
+        ([a, b]) => `<article class="panel"><h3>${a}</h3><p>${b}</p></article>`
+      ).join("")}
+    </div>
+    <a class="btn" href="#/embalagens">Conhe\xE7a as refer\xEAncias de embalagens</a>
+  </section>`
+    );
+  }
+  function information(page) {
+    const c = state.config.company, eco = state.config.ecotroca;
+    const policies = {
+      privacidade: ["Pol\xEDtica de privacidade", "privacy"],
+      termos: ["Termos de uso", "terms"],
+      entrega: ["Pol\xEDtica de entrega", "delivery"],
+      trocas: ["Trocas e devolu\xE7\xF5es", "returns"]
+    };
+    if (policies[page]) {
+      const [title, key] = policies[page], content = state.config.policies[key];
+      return (
+        /* HTML */
+        `<section class="container section">
+      <h1>${t(title)}</h1>
+      <div class="panel">
+        ${content ? `<p style="white-space:pre-wrap">${e(content)}</p>` : `<p>A pol\xEDtica comercial definitiva ainda n\xE3o foi publicada pela EcoPet. Vendas reais permanecem condicionadas \xE0 configura\xE7\xE3o e revis\xE3o dessas informa\xE7\xF5es.</p>${key === "privacy" ? "<p>Nesta instala\xE7\xE3o, cadastro, endere\xE7os, pedidos e notifica\xE7\xF5es s\xE3o mantidos no banco do servidor. Carrinho, favoritos de visitante e prefer\xEAncias de acessibilidade usam armazenamento local. Pagamentos, entrega e e-mails s\xF3 s\xE3o encaminhados aos provedores quando configurados.</p><p>\xC9 poss\xEDvel exportar seus dados em Minha conta. Solicita\xE7\xF5es sobre exclus\xE3o ou corre\xE7\xE3o podem ser feitas pelo canal oficial de atendimento. O respons\xE1vel, o prazo de reten\xE7\xE3o e o contato de privacidade devem ser cadastrados antes do lan\xE7amento.</p>" : ""}`}
+      </div>
+    </section>`
+      );
+    }
+    if (page === "ecotroca") return ecoTrocaPage();
+    if (page === "sustentabilidade")
+      return (
+        /* HTML */
+        `<section class="container section">
+      <span class="eyebrow">Responsabilidade em cada escolha</span>
+      <h1>Reaproveitar com cuidado.</h1>
+      <p class="lead">
+        Nossa proposta \xE9 dar novas possibilidades aos materiais e incentivar o
+        consumo consciente, respeitando as necessidades de cada esp\xE9cie.
+      </p>
+      <div class="panels section">
+        <article class="panel">
+          <h3>Materiais</h3>
+          <p>
+            Retalhos, papel\xE3o e outros materiais precisam ser selecionados e
+            avaliados para cada produto. O reaproveitamento n\xE3o substitui a
+            verifica\xE7\xE3o de seguran\xE7a.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Transpar\xEAncia</h3>
+          <p>
+            Composi\xE7\xE3o, medidas e cuidados s\xE3o informados em cada p\xE1gina. Quando
+            ainda n\xE3o foram confirmados, isso aparece claramente.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Participa\xE7\xE3o</h3>
+          <p>
+            O projeto EcoTroca pretende aproximar os clientes do
+            reaproveitamento respons\xE1vel.
+          </p>
+          <a href="#/ecotroca">Conhecer EcoTroca \u2192</a>
+        </article>
+      </div>
+      <a href="#/produtos" class="btn">Produtos sustent\xE1veis</a>
+    </section>`
+      );
+    if (page === "embalagens")
+      return (
+        /* HTML */
+        `<section class="container section">
+      <span class="eyebrow">Cuidado que acompanha a escolha</span>
+      <h1>Etiquetas e embalagens.</h1>
+      <p class="lead">
+        Refer\xEAncias para caixas de papel\xE3o, kraft, papel recicl\xE1vel e materiais
+        simples e reaproveitados.
+      </p>
+      <div class="story section">
+        <figure>
+          <img
+            src="assets/embalagens-novas.jpeg"
+            alt="Refer\xEAncia de etiquetas e embalagens sustent\xE1veis"
+            style="border-radius:24px"
+          />
+          <figcaption class="muted">
+            Refer\xEAncia visual preservada. N\xE3o \xE9 comprova\xE7\xE3o de pedidos enviados.
+            S\xEDmbolos da refer\xEAncia n\xE3o substituem a logo EcoPet.
+          </figcaption>
+        </figure>
+        <div class="thank-you">
+          <img src="assets/logo-ecopet.png" alt="EcoPet" />
+          <p>
+            \u201CObrigado por escolher a EcoPet! Sua escolha faz parte de um futuro
+            mais consciente.\u201D
+          </p>
+          <small>Modelo de cart\xE3o de agradecimento</small>
+        </div>
+      </div>
+    </section>`
+      );
+    if (page === "pagamento")
+      return (
+        /* HTML */
+        `<section class="container section">
+      <h1>${t("Formas de pagamento")}</h1>
+      <div class="panels">
+        <article class="panel">
+          <h3>Pix</h3>
+          <p>
+            Quando habilitado, o QR Code, c\xF3digo copia e cola e validade s\xE3o
+            fornecidos pelo Mercado Pago. A aprova\xE7\xE3o depende da confirma\xE7\xE3o do
+            provedor.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Cart\xE3o</h3>
+          <p>
+            O pagamento acontece no ambiente seguro do Mercado Pago. Parcelas,
+            juros e total s\xE3o apresentados pelo provedor antes da confirma\xE7\xE3o. A
+            EcoPet n\xE3o recebe n\xFAmero completo ou c\xF3digo de seguran\xE7a.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Configura\xE7\xE3o atual</h3>
+          <p>
+            ${state.config.commerce ? "Integra\xE7\xE3o habilitada. Consulte as op\xE7\xF5es no checkout." : "Ambiente de demonstra\xE7\xE3o: pagamentos n\xE3o habilitados."}
+          </p>
+        </article>
+      </div>
+    </section>`
+      );
+    if (page === "ajuda")
+      return (
+        /* HTML */
+        `<section class="container section">
+      <h1>${t("D\xFAvidas frequentes")}</h1>
+      ${[
+          [
+            "J\xE1 posso comprar?",
+            "A compra s\xF3 \xE9 liberada quando o produto, estoque e integra\xE7\xF5es comerciais estiverem confirmados. Em demonstra\xE7\xE3o, voc\xEA pode navegar e testar o carrinho sem pagar."
+          ],
+          [
+            "Como acompanho meu pedido?",
+            "Entre em Meus pedidos para consultar os eventos registrados e o rastreamento, quando dispon\xEDvel."
+          ],
+          [
+            "Os materiais s\xE3o seguros para todos os pets?",
+            "Cada produto precisa de avalia\xE7\xE3o espec\xEDfica. N\xE3o considere uma imagem ou o uso de material reaproveitado como garantia de seguran\xE7a."
+          ],
+          [
+            "Como funciona a EcoTroca?",
+            "Consulte a p\xE1gina EcoTroca. Benef\xEDcios s\xF3 s\xE3o concedidos conforme uma campanha ativa."
+          ]
+        ].map(
+          ([q, a]) => `<details class="panel" style="margin-bottom:12px"><summary>${q}</summary><p>${a}</p></details>`
+        ).join("")}
+    </section>`
+      );
+    return (
+      /* HTML */
+      `<section class="container section">
+    <span class="eyebrow">Vamos conversar</span>
+    <h1>${t("Fale conosco")}</h1>
+    <div class="panel">
+      <h2>EcoPet</h2>
+      <p>Nosso canal oficial \xE9 o Instagram.</p>
+      <a
+        class="btn"
+        href="${e(c.instagram)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >@ecopet.oficial0 \u2197</a
+      >${c.email ? `<p>E-mail: <a href="mailto:${e(c.email)}">${e(c.email)}</a></p>` : ""}${c.phone ? `<p>Telefone: ${e(c.phone)}</p>` : ""}${c.address ? `<p>${e(c.address)}</p>` : ""}${c.cnpj ? `<p>CNPJ: ${e(c.cnpj)}</p>` : ""}
+    </div>
+  </section>`
+    );
+  }
+
+  // simples-src/account.js
+  function login(register = false) {
+    const profile = localProfile();
+    return `<section class="container"><div class="auth panel"><img src="assets/logo-ecopet.png" alt="Logo EcoPet"><h1>${register ? 'Criar conta' : 'Entrar'}</h1>${demoNotice}
+    ${register ? `<form id="demo-register" class="form" autocomplete="off">${field('Apelido','name','text','','required minlength="2" maxlength="100" autocomplete="off"')}${field('E-mail','email','email','','required maxlength="100" placeholder="cliente@example.com" autocomplete="off"')}${field('CPF','cpf','text','','required inputmode="numeric" pattern="[0-9]{3}\\.?[0-9]{3}\\.?[0-9]{3}-?[0-9]{2}" placeholder="000.000.000-00" maxlength="14" autocomplete="off"')}${field('Senha','password','password','','required minlength="6" maxlength="80" autocomplete="off"')}${errorBox()}<button class="btn">Criar conta</button></form>` : profile ? `<form id="local-login-form" class="form"><p>Continuar como <strong>${e(profile.name)}</strong></p>${errorBox()}<button class="btn">Entrar</button></form>` : '<p>Crie sua conta para continuar.</p><a class="btn" href="#/cadastro">Criar conta</a>'}
+    <p style="margin-top:20px;text-align:center"><a href="#/${register ? 'login' : 'cadastro'}">${register ? 'Entrar' : 'Criar conta'}</a></p></div></section>`;
+  }
+  function recovery(token) {
+    return (
+      /* HTML */
+      `<section class="container">
+    <div class="auth panel">
+      <img src="assets/logo-ecopet.png" alt="EcoPet" />
+      <h1>${token ? "Nova senha" : t("Esqueci minha senha")}</h1>
+      <form
+        id="${token ? "reset" : "forgot"}-form"
+        class="form"
+        data-token="${e(token || "")}"
+      >
+        ${token ? field(
+        "Senha",
+        "password",
+        "password",
+        "",
+        'required minlength="12" maxlength="128" autocomplete="new-password"'
+      ) : field(
+        "E-mail",
+        "email",
+        "email",
+        "",
+        "required"
+      )}${errorBox()}<button class="btn">
+          ${token ? "Salvar nova senha" : "Solicitar recupera\xE7\xE3o"}
+        </button>
+        <p data-result role="status"></p>
+      </form>
+    </div>
+  </section>`
+    );
+  }
+  async function account() {
+    return `<section class="container section"><span class="eyebrow">Minha EcoPet</span>
+    <h1>Ol\xE1, ${e(state.user.name.split(" ")[0])}.</h1>
+    
+    <div class="buttons"><a class="btn secondary" href="#/pedidos">Meus pedidos</a><a class="btn secondary" href="#/favoritos">Favoritos</a><a class="btn secondary" href="#/carrinho">Carrinho</a><button class="btn secondary" data-logout>Sair</button></div>
+    <div class="panels section"><form id="local-profile-form" class="panel form"><h3>Dados do perfil</h3>
+      ${field("Nome completo", "name", "text", state.user.name, 'required minlength="2" maxlength="100" autocomplete="name"')}
+      ${errorBox()}<button class="btn">Salvar</button>
+    </form></div>
+  </section>`;
+  }
+  function addressForm() {
+    return (
+      /* HTML */
+      `<form id="address-form" class="form panel">
+    <h3>Novo endere\xE7o</h3>
+    <div class="form-grid">
+      ${field(
+        "CEP",
+        "cep",
+        "text",
+        "",
+        'required inputmode="numeric" maxlength="9" autocomplete="postal-code"'
+      )}${field(
+        "Rua",
+        "street",
+        "text",
+        "",
+        'required autocomplete="address-line1"'
+      )}${field(
+        "N\xFAmero",
+        "number",
+        "text",
+        "",
+        'required maxlength="20"'
+      )}${field(
+        "Complemento",
+        "complement",
+        "text",
+        "",
+        'autocomplete="address-line2"'
+      )}${field("Bairro", "district", "text", "", "required")}${field(
+        "Cidade",
+        "city",
+        "text",
+        "",
+        'required autocomplete="address-level2"'
+      )}${field(
+        "Estado",
+        "state",
+        "text",
+        "",
+        'required minlength="2" maxlength="2" autocomplete="address-level1"'
+      )}
+    </div>
+    <button type="button" class="btn secondary" data-cep>
+      Preencher pelo CEP</button
+    >${errorBox()}<button class="btn">${t("Salvar endere\xE7o")}</button>
+  </form>`
+    );
+  }
+  async function addresses() {
+    const rows = await api("/addresses");
+    return (
+      /* HTML */
+      `<section class="container section">
+    <h1>${t("Meus endere\xE7os")}</h1>
+    <div class="panels" style="margin-bottom:28px">
+      ${rows.map(
+        (a) => `<article class="panel"><h3>${e(a.street)}, ${e(a.number)}</h3><p>${e(a.complement)}<br>${e(a.district)} \xB7 ${e(a.city)}/${e(a.state)}<br>${e(a.cep)}</p><button class="btn secondary" data-address-delete="${a.id}">Remover</button></article>`
+      ).join("")}
+    </div>
+    ${addressForm()}
+  </section>`
+    );
+  }
+  async function notifications() {
+    const remote = state.user && !state.user.local ? await api("/notifications") : [];
+    const rows = [...remote, ...state.localNotifications].sort(
+      (a, b) => b.created_at.localeCompare(a.created_at)
+    );
+    return (
+      /* HTML */
+      `<section class="container section">
+    <h1>${t("Notifica\xE7\xF5es")}</h1>
+    ${rows.map(
+        (n) => `<article class="panel notification ${n.read ? "" : "unread"}"><div><p>${e(n.message)}</p><time datetime="${n.created_at}">${date(n.created_at)}</time>${n.order_id ? `<p><a href="#/pedido/${n.order_id}">Ver pedido</a></p>` : ""}</div>${!n.read ? `<button class="btn secondary small" data-read="${n.id}" data-remote="${!!n.user_id}">${t("Marcar como lida")}</button>` : ""}</article>`
+      ).join("") || '<div class="empty">Nenhuma notifica\xE7\xE3o por enquanto.</div>'}
+  </section>`
+    );
+  }
+  async function orders() {
+    const list = await api("/orders");
+    return (
+      /* HTML */
+      `<section class="container section">
+    <h1>${t("Meus pedidos")}</h1>
+    ${list.map(
+        (o) => `<article class="panel" style="margin-bottom:16px"><span class="pill">${statusLabel[o.status] || e(o.status)}</span><h3>Pedido ${o.id.slice(0, 8).toUpperCase()}</h3><p>${date(o.created_at)} \xB7 ${money(o.total)}</p><a class="btn secondary" href="#/pedido/${o.id}">Acompanhar pedido</a></article>`
+      ).join("") || '<div class="empty"><h2>Voc\xEA ainda n\xE3o tem pedidos.</h2><a class="btn" href="#/produtos">Explorar produtos</a></div>'}
+  </section>`
+    );
+  }
+  async function order(id) {
+    const o = await api("/orders/" + id), p = o.payment;
+    return (
+      /* HTML */
+      `<section class="container section">
+    <nav class="breadcrumbs">
+      <a href="#/pedidos">Meus pedidos</a> / ${id.slice(0, 8).toUpperCase()}
+    </nav>
+    <h1>Seu pedido, passo a passo.</h1>
+    <div class="cart-layout">
+      <div class="panel">
+        <span class="pill">${statusLabel[o.status] || e(o.status)}</span>
+        <h3>Pedido ${e(o.id)}</h3>
+        <ol class="timeline">
+          ${o.events.map(
+        (ev) => `<li><strong>${statusLabel[ev.status] || e(ev.status)}</strong><time datetime="${ev.created_at}">${date(ev.created_at)}</time><p>${e(ev.note)}</p></li>`
+      ).join("")}
+        </ol>
+        ${o.delivery.tracking ? `<p>Transportadora: ${e(o.delivery.carrier)}</p><p>C\xF3digo: ${e(o.delivery.tracking)}</p><a class="btn secondary" href="${e(o.delivery.url)}" target="_blank" rel="noopener noreferrer">Acompanhar na transportadora \u2197</a>` : ""}
+        <h3>Entrega</h3>
+        <p>
+          ${e(o.address.street)}, ${e(o.address.number)}
+          ${e(o.address.complement)}<br />${e(o.address.city)}/${e(
+        o.address.state
+      )}
+          \xB7 ${e(o.address.cep)}
+        </p>
+      </div>
+      <aside class="panel">
+        <h3>Itens do pedido</h3>
+        ${o.items.map(
+        (i) => `<p>${i.quantity} \xD7 ${e(i.name)}<br>${money(i.price * i.quantity)}</p>`
+      ).join("")}
+        <div class="total-line">
+          <span>Frete</span><strong>${money(o.shipping)}</strong>
+        </div>
+        <div class="total-line">
+          <span>Desconto</span><strong>\u2212 ${money(o.discount)}</strong>
+        </div>
+        <div class="total-line big">
+          <span>Total</span><strong>${money(o.total)}</strong>
+        </div>
+        ${o.status === "pending" ? `<a class="btn" href="#/pagar/${o.id}">Ir para pagamento</a><button class="btn secondary" data-refresh-order="${o.id}">Verificar status</button><button class="btn secondary" data-cancel-order="${o.id}">Cancelar pedido</button>` : ""}
+      </aside>
+    </div>
+    ${o.status === "delivered" ? `<section class="section"><h2>Avalie sua compra</h2><form id="review-form" class="panel form"><label class="field">Produto<select name="productId">${o.items.map((i) => `<option value="${i.id}">${e(i.name)}</option>`).join("")}</select></label><label class="field">Nota<select name="rating">${[5, 4, 3, 2, 1].map((n) => `<option>${n}</option>`).join("")}</select></label><label class="field">Sua avalia\xE7\xE3o<textarea name="text" required minlength="10" maxlength="1500"></textarea></label>${errorBox()}<button class="btn">Enviar para modera\xE7\xE3o</button></form></section>` : ""}
+  </section>`
+    );
+  }
+
+  // simples-src/checkout.js
+  var checkout = {
+    step: 2,
+    addressId: "",
+    quote: null,
+    serviceId: "",
+    method: "pix",
+    coupon: "",
+    preview: null
+  };
+  var timer;
+  var poll;
+  function stopPaymentTimers() {
+    clearInterval(timer);
+    clearInterval(poll);
+  }
+  async function checkoutPage() {
+    if (!state.user) {
+      safeSession.setItem("ecopet-return", "/checkout");
+      location.hash = "/login";
+      return "";
+    }
+    if (!state.cart.length) {
+      location.hash = "/carrinho";
+      return "";
+    }
+    const addresses2 = await api("/addresses");
+    const steps = [
+      "Identifica\xE7\xE3o",
+      "Endere\xE7o",
+      "Entrega",
+      "Revis\xE3o",
+      "Pagamento",
+      "Confirma\xE7\xE3o"
+    ];
+    let content = "";
+    if (checkout.step === 2)
+      content = /* HTML */
+      `<h2>Onde voc\xEA quer receber?</h2>
+      ${addresses2.length ? `<form id="checkout-address" class="form">${addresses2.map((a) => `<label class="radio-card"><input type="radio" name="addressId" value="${a.id}" ${checkout.addressId === a.id ? "checked" : ""} required><span><strong>${e(a.street)}, ${e(a.number)}</strong><small>${e(a.city)}/${e(a.state)} \xB7 ${e(a.cep)}</small></span></label>`).join("")}${errorBox()}<button class="btn">${t("Continuar")}</button></form>` : "<p>Cadastre um endere\xE7o para continuar.</p>"}
+      <div style="margin-top:28px">${addressForm()}</div>`;
+    if (checkout.step === 3)
+      content = /* HTML */
+      `<h2>Escolha a entrega</h2>
+      <form id="checkout-delivery" class="form">
+        ${(checkout.quote?.options || []).map(
+        (o) => `<label class="radio-card"><input type="radio" name="serviceId" value="${e(o.id)}" required><span><strong>${e(o.name)}</strong><small>${o.days} dia(s) \xFAteis estimados de transporte${o.productionDays ? ` + ${o.productionDays} de prepara\xE7\xE3o` : ""}</small></span><strong>${money(o.price)}</strong></label>`
+      ).join("")}${errorBox()}<button class="btn">${t("Continuar")}</button>
+      </form>
+      <button class="btn secondary" data-checkout-back="2">
+        ${t("Voltar")}
+      </button>`;
+    if (checkout.step === 4) {
+      const a = addresses2.find((a2) => a2.id === checkout.addressId), s = checkout.quote.options.find((s2) => s2.id === checkout.serviceId);
+      content = /* HTML */
+      `<h2>Confira suas escolhas</h2>
+      <div class="panel">
+        ${state.cart.map((i) => {
+        const p = state.products.find((p2) => p2.id === i.id);
+        return (
+          /* HTML */
+          `<div class="total-line">
+              <span>${i.quantity} \xD7 ${e(p.name)}</span
+              ><strong>${money(p.price * i.quantity)}</strong>
+            </div>`
+        );
+      }).join("")}
+        <div class="total-line">
+          <span>Subtotal</span
+          ><strong>${money(checkout.preview.subtotal)}</strong>
+        </div>
+        <div class="total-line">
+          <span>Desconto</span
+          ><strong>\u2212 ${money(checkout.preview.discount)}</strong>
+        </div>
+        <div class="total-line">
+          <span>${e(s.name)}</span><strong>${money(s.price)}</strong>
+        </div>
+        <div class="total-line big">
+          <span>Total</span
+          ><strong
+            >${money(
+        checkout.preview.subtotal - checkout.preview.discount + s.price
+      )}</strong
+          >
+        </div>
+        <p>
+          ${e(a.street)}, ${e(a.number)} \xB7 ${e(a.city)}/${e(a.state)} \xB7
+          ${e(a.cep)}
+        </p>
+      </div>
+      <form id="checkout-payment" class="form" style="margin-top:24px">
+        <h3>Forma de pagamento</h3>
+        <label class="radio-card"
+          ><input type="radio" name="method" value="pix" checked /><span
+            >Pix<small>QR Code emitido pelo provedor</small></span
+          ></label
+        ><label class="radio-card"
+          ><input type="radio" name="method" value="card" /><span
+            >Cart\xE3o<small
+              >Parcelamento, juros e total no ambiente seguro do Mercado
+              Pago</small
+            ></span
+          ></label
+        ><label class="check"
+          ><input type="checkbox" required />Li os
+          <a href="#/termos" target="_blank">termos</a> e a
+          <a href="#/entrega" target="_blank">pol\xEDtica de entrega</a>.</label
+        >${errorBox()}<button class="btn">
+          Criar pedido e ir para pagamento
+        </button>
+      </form>
+      <button class="btn secondary" data-checkout-back="2">
+        Alterar endere\xE7o
+      </button>`;
+    }
+    return (
+      /* HTML */
+      `<section class="container section">
+    <span class="eyebrow">Compra EcoPet</span>
+    <h1>Falta pouco para cuidar.</h1>
+    <ol class="steps">
+      ${steps.map(
+        (s, i) => `<li class="${i + 1 === checkout.step ? "active" : i + 1 < checkout.step ? "done" : ""}" ${i + 1 === checkout.step ? 'aria-current="step"' : ""}>${i + 1}. ${t(s)}</li>`
+      ).join("")}
+    </ol>
+    ${!state.config.commerce ? '<div class="notice">Ambiente de demonstra\xE7\xE3o. Voc\xEA pode cadastrar um endere\xE7o; frete e pagamento s\xF3 ser\xE3o liberados ap\xF3s configurar os servi\xE7os. Nenhuma cobran\xE7a ser\xE1 gerada.</div>' : ""}
+    <div style="max-width:800px">${content}</div>
+  </section>`
+    );
+  }
+  async function handleCheckoutForm(form) {
+    const b = formData(form);
+    if (form.id === "checkout-address") {
+      checkout.addressId = b.addressId;
+      const addresses2 = await api("/addresses"), a = addresses2.find((a2) => a2.id === b.addressId);
+      checkout.quote = await api("/shipping/quote", "POST", {
+        items: state.cart,
+        cep: a.cep
+      });
+      checkout.step = 3;
+      return true;
+    }
+    if (form.id === "checkout-delivery") {
+      checkout.serviceId = b.serviceId;
+      checkout.coupon = safeSession.getItem("ecopet-coupon") || "";
+      checkout.preview = await api("/cart/preview", "POST", {
+        items: state.cart,
+        coupon: checkout.coupon
+      });
+      checkout.step = 4;
+      return true;
+    }
+    if (form.id === "checkout-payment") {
+      const request = {
+        items: state.cart,
+        addressId: checkout.addressId,
+        quoteId: checkout.quote.id,
+        serviceId: checkout.serviceId,
+        coupon: checkout.coupon,
+        method: b.method
+      };
+      const serialized = JSON.stringify(request), saved = load("ecopet-order-attempt", null);
+      const attempt = saved?.request === serialized ? saved : { key: crypto.randomUUID(), request: serialized };
+      save("ecopet-order-attempt", attempt);
+      const order2 = await api("/orders", "POST", request, {
+        "Idempotency-Key": attempt.key
+      });
+      state.cart = [];
+      persistCart();
+      save("ecopet-order-attempt", null);
+      location.hash = "/pagar/" + order2.id;
+      return true;
+    }
+    return false;
+  }
+  function checkoutBack(step) {
+    checkout.step = step;
+  }
+  async function paymentPage(id) {
+    const o = await api("/orders/" + id);
+    if (o.status !== "pending") {
+      location.hash = "/pedido/" + id;
+      return "";
+    }
+    let p = o.payment, error = "";
+    try {
+      p = await api(`/orders/${id}/payment`, "POST", {});
+    } catch (err) {
+      error = err.message;
+    }
+    const html = (
+      /* HTML */
+      `<section class="container section">
+    <div class="panel pix">
+      <img class="logo" src="assets/logo-ecopet.png" alt="EcoPet" /><span
+        class="eyebrow"
+        >Pedido ${e(id.slice(0, 8).toUpperCase())}</span
+      >
+      <h1 style="font-size:2rem">Seu pedido est\xE1 aguardando pagamento.</h1>
+      <strong class="price">${money(o.total)}</strong>${state.config.mode === "sandbox" ? '<div class="notice">Ambiente de testes do provedor. Use somente os dados e contas de teste.</div>' : ""}${error ? `<div class="notice error" role="alert">${e(error)}</div>` : ""}
+      <p id="payment-status">
+        ${statusLabel[p?.status] || "Aguardando cobran\xE7a"}
+      </p>
+      ${p?.qr ? `<img class="qr" src="data:image/png;base64,${e(p.qr)}" alt="QR Code Pix emitido pelo Mercado Pago"><p>Abra o aplicativo do seu banco, escolha a op\xE7\xE3o Pix e escaneie o QR Code ou utilize o c\xF3digo copia e cola.</p><label class="field">C\xF3digo Pix copia e cola<textarea id="pix-code" readonly>${e(p.code)}</textarea></label><button class="btn" data-copy-pix>Copiar c\xF3digo Pix</button><p id="pix-time" role="timer" aria-live="off"></p><button class="btn secondary" data-renew-pix="${id}">Gerar novo Pix ap\xF3s expira\xE7\xE3o</button>` : p?.url ? `<p>Voc\xEA ver\xE1 op\xE7\xF5es de parcelamento, juros e total antes de confirmar no Mercado Pago.</p><a class="btn" href="${e(p.url)}" rel="noreferrer">Pagar no Mercado Pago \u2197</a>` : "<p>Nenhum c\xF3digo de pagamento dispon\xEDvel.</p>"}
+      <div class="buttons" style="justify-content:center;margin-top:20px">
+        <button class="btn secondary" data-refresh-order="${id}">
+          Verificar pagamento</button
+        ><a href="#/pedido/${id}">Ver pedido</a>
+      </div>
+    </div>
+  </section>`
+    );
+    setTimeout(() => {
+      if (p?.expires) {
+        const tick = () => {
+          const el = $("#pix-time");
+          if (!el) return;
+          const seconds = Math.max(
+            0,
+            Math.floor((Date.parse(p.expires) - Date.now()) / 1e3)
+          );
+          el.textContent = seconds ? `V\xE1lido por ${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}` : "O prazo para pagamento deste Pix terminou. Verifique o status antes de uma nova tentativa.";
+          if (!seconds) clearInterval(timer);
+        };
+        tick();
+        timer = setInterval(tick, 1e3);
+      }
+      poll = setInterval(async () => {
+        try {
+          const fresh = await api(`/orders/${id}/refresh`, "POST", {});
+          if (fresh.status === "paid") {
+            stopPaymentTimers();
+            toast("Pagamento aprovado! Obrigado por comprar na EcoPet.");
+            location.hash = "/pedido/" + id;
+          } else if ($("#payment-status"))
+            $("#payment-status").textContent = statusLabel[fresh.payment?.status] || "Aguardando pagamento";
+        } catch {
+        }
+      }, 15e3);
+    }, 0);
+    return html;
+  }
+
+  // simples-src/admin.js
+  var tabs = [
+    ["dashboard", "Vis\xE3o geral"],
+    ["products", "Produtos"],
+    ["orders", "Pedidos"],
+    ["payments", "Pagamentos"],
+    ["users", "Clientes"],
+    ["coupons", "Cupons"],
+    ["reviews", "Avalia\xE7\xF5es"],
+    ["settings", "Configura\xE7\xF5es"],
+    ["audit", "Eventos"]
+  ];
+  var table = (headers, rows) => `<div class="table-wrap"><table class="table"><thead><tr>${headers.map((h) => `<th scope="col">${e(h)}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
+  async function adminPage(tab = "dashboard", params = new URLSearchParams()) {
+    if (state.user?.role !== "admin")
+      return '<section class="container section"><h1>Acesso restrito.</h1><p>Esta \xE1rea exige uma conta administrativa autorizada no servidor.</p></section>';
+    let content = "";
+    if (tab === "dashboard") {
+      const d = await api(
+        "/admin/dashboard" + (params.toString() ? "?" + params : "")
+      );
+      content = /* HTML */
+      `<form id="admin-period" class="buttons">
+        ${field("De", "from", "date", params.get("from") || "")}${field(
+        "At\xE9",
+        "to",
+        "date",
+        params.get("to") || ""
+      )}<button class="btn">Filtrar</button>
+      </form>
+      <div class="metrics">
+        ${[
+        ["Pedidos", d.count],
+        ["Faturamento", money(d.revenue)],
+        ["Pendentes", d.pending],
+        ["Enviados", d.shipped]
+      ].map(
+        ([a, b]) => `<div class="panel"><span>${a}</span><strong>${b}</strong></div>`
+      ).join("")}
+      </div>
+      <div class="panels">
+        <div class="panel">
+          <h3>Mais vendidos</h3>
+          ${d.best.map(([n, q]) => `<p>${e(n)}: ${q}</p>`).join("") || "<p>Sem vendas confirmadas no per\xEDodo.</p>"}
+        </div>
+        <div class="panel">
+          <h3>Pouco estoque</h3>
+          ${d.lowStock.map((p) => `<p>${e(p.name)}: ${p.stock}</p>`).join("")}
+        </div>
+        <div class="panel">
+          <h3>E-mails</h3>
+          ${d.mail.map((m) => `<p>${e(m.status)}: ${m.count}</p>`).join("") || "<p>Nenhum envio registrado.</p>"}
+        </div>
+      </div>
+      <h2 style="margin-top:30px">Vendas por per\xEDodo</h2>
+      ${table(
+        ["Data", "Valor"],
+        d.sales.map(
+          (s) => `<tr><td>${date(s.date)}</td><td>${money(s.total)}</td></tr>`
+        )
+      )}`;
+    } else if (tab === "products") {
+      const list = await api("/admin/products");
+      content = /* HTML */
+      `<p>
+        Estoque significa unidades dispon\xEDveis para novas compras, sem incluir
+        reservas. Pre\xE7os em centavos no JSON t\xE9cnico. A libera\xE7\xE3o para venda
+        exige confirma\xE7\xE3o registrada de materiais e adequa\xE7\xE3o.
+      </p>
+      <button class="btn" data-new-product>Novo produto</button>
+      <div id="new-product"></div>
+      ${list.map(
+        (p) => `<details class="panel" style="margin-top:18px"><summary>${e(p.name)} \xB7 ${money(p.price)} \xB7 Estoque: ${p.stock}</summary>${productForm(p)}</details>`
+      ).join("")}`;
+    } else if (tab === "orders") {
+      const list = await api("/admin/orders");
+      content = list.map(
+        (o) => `<details class="panel" style="margin-bottom:16px"><summary>${e(o.id)} \xB7 ${statusLabel[o.status]} \xB7 ${money(o.total)}</summary><p>${date(o.created_at)}</p><p>${o.items.map((i) => `${i.quantity} \xD7 ${e(i.name)}`).join("<br>")}</p><p>${e(o.address.street)}, ${e(o.address.number)} \xB7 ${e(o.address.city)}/${e(o.address.state)}</p>${["paid", "production", "packed", "shipped"].includes(o.status) ? `<form class="form admin-order" data-id="${o.id}"><label class="field">Pr\xF3xima etapa<select name="status">${[{ paid: ["production", "Em produ\xE7\xE3o/separa\xE7\xE3o"], production: ["packed", "Embalado"], packed: ["shipped", "Enviado"], shipped: ["delivered", "Entregue"] }[o.status]].map(([v, l]) => `<option value="${v}">${l}</option>`).join("")}</select></label>${field("Observa\xE7\xE3o", "note")}${o.status === "packed" ? field("C\xF3digo de rastreamento", "tracking", "text", "", "required") + field("Transportadora", "carrier", "text", "", "required") + field("URL oficial de rastreamento", "url", "url", "", "required") : ""}${errorBox()}<button class="btn">Registrar atualiza\xE7\xE3o real</button></form>` : "<p>Pagamento e cancelamento s\xE3o conciliados com o provedor, sem bot\xE3o administrativo de aprova\xE7\xE3o.</p>"}</details>`
+      ).join("") || '<div class="empty">Nenhum pedido.</div>';
+    } else if (tab === "payments") {
+      const list = await api("/admin/payments");
+      content = table(
+        ["Pedido", "Identificador do provedor", "Status", "Tentativa", "Data"],
+        list.map(
+          (p) => `<tr><td>${e(p.order_id)}</td><td>${e(p.provider_id || "Ainda n\xE3o recebido")}</td><td>${e(p.status)}</td><td>${p.attempt}</td><td>${date(p.created_at)}</td></tr>`
+        )
+      );
+    } else if (tab === "users") {
+      const list = await api("/admin/users");
+      content = table(
+        ["Nome", "E-mail", "Telefone", "Papel", "E-mail confirmado"],
+        list.map(
+          (u) => `<tr><td>${e(u.name)}</td><td>${e(u.email)}</td><td>${e(u.phone)}</td><td>${e(u.role)}</td><td>${u.verified ? "Sim" : "N\xE3o"}</td></tr>`
+        )
+      );
+    } else if (tab === "coupons") {
+      const list = await api("/admin/coupons");
+      content = /* HTML */
+      `<form id="admin-coupon" class="panel form">
+        <h3>Criar ou atualizar cupom</h3>
+        <div class="form-grid">
+          ${field("C\xF3digo", "code", "text", "", "required")}${field(
+        "Desconto (%)",
+        "percent",
+        "number",
+        "",
+        'min="1" max="100" required'
+      )}${field(
+        "Validade",
+        "expires_at",
+        "datetime-local",
+        "",
+        "required"
+      )}${field(
+        "Compra m\xEDnima (R$)",
+        "min",
+        "number",
+        "0",
+        'min="0" step="0.01"'
+      )}
+        </div>
+        <label class="check"
+          ><input type="checkbox" name="active" />Campanha ativa</label
+        >${errorBox()}<button class="btn">Salvar cupom</button>
+      </form>
+      ${table(
+        ["C\xF3digo", "Desconto", "Validade", "Ativo"],
+        list.map(
+          (c) => `<tr><td>${e(c.code)}</td><td>${c.percent}%</td><td>${date(c.expires_at)}</td><td>${c.active ? "Sim" : "N\xE3o"}</td></tr>`
+        )
+      )}`;
+    } else if (tab === "reviews") {
+      const list = await api("/admin/reviews");
+      content = list.map(
+        (r) => `<article class="panel"><h3>${r.rating}/5</h3><p>${e(r.text)}</p><button class="btn secondary" data-review-id="${r.id}" data-approved="${!r.approved}">${r.approved ? "Ocultar" : "Publicar avalia\xE7\xE3o verificada"}</button></article>`
+      ).join("") || '<div class="empty">Nenhuma avalia\xE7\xE3o para moderar.</div>';
+    } else if (tab === "settings") {
+      const settings = await api("/admin/settings");
+      content = /* HTML */
+      `<p>
+        Campos t\xE9cnicos em JSON: mantenha as chaves e altere os valores.
+        Categorias, banner, regras EcoTroca, pol\xEDticas e contatos s\xE3o
+        persistidos no servidor. Credenciais s\xE3o configuradas somente no
+        ambiente do servidor.
+      </p>
+      ${Object.entries(settings).map(
+        ([key, value]) => `<form class="panel form admin-setting" data-key="${key}" style="margin-bottom:18px"><h3>${e(key)}</h3><label class="field">Conte\xFAdo<textarea class="code-input" name="value" required>${e(JSON.stringify(value, null, 2))}</textarea></label>${errorBox()}<button class="btn">Salvar configura\xE7\xE3o</button></form>`
+      ).join("")}`;
+    } else if (tab === "audit") {
+      const list = await api("/admin/audit");
+      content = table(
+        ["A\xE7\xE3o", "Alvo", "Data"],
+        list.map(
+          (a) => `<tr><td>${e(a.action)}</td><td>${e(a.target)}</td><td>${date(a.created_at)}</td></tr>`
+        )
+      );
+    }
+    return (
+      /* HTML */
+      `<section class="container section">
+    <span class="eyebrow">\xC1rea privada \xB7 EcoPet</span>
+    <h1>Administra\xE7\xE3o</h1>
+    <nav class="admin-tabs" aria-label="Administra\xE7\xE3o">
+      ${tabs.map(
+        ([id, title]) => `<a href="#/admin/${id}" class="${id === tab ? "active" : ""}">${title}</a>`
+      ).join("")}
+    </nav>
+    ${content}
+  </section>`
+    );
+  }
+  function productForm(p = {
+    name: "",
+    animal: "Cachorros",
+    category: "Brinquedos",
+    price: 1990,
+    stock: 0,
+    active: 1,
+    approved: 0,
+    images: [],
+    variants: [],
+    materialTags: [],
+    translations: {},
+    description: "",
+    materials: "",
+    benefits: "",
+    care: "",
+    specifications: "",
+    safetyNote: "",
+    weight: null,
+    width: null,
+    height: null,
+    length: null,
+    productionDays: null
+  }) {
+    return (
+      /* HTML */
+      `<form
+    class="admin-product form"
+    data-id="${e(p.id || "")}"
+    style="margin-top:20px"
+  >
+    <div class="form-grid">
+      ${field("Nome", "name", "text", p.name, "required")}${field(
+        "Pre\xE7o (R$)",
+        "price",
+        "number",
+        p.price / 100,
+        'min="0.01" step="0.01" required'
+      )}${field("Animal", "animal", "text", p.animal, "required")}${field(
+        "Categoria",
+        "category",
+        "text",
+        p.category,
+        "required"
+      )}${field(
+        "Estoque dispon\xEDvel",
+        "stock",
+        "number",
+        p.stock,
+        'min="0" step="1" required'
+      )}
+    </div>
+    ${[
+        "description",
+        "materials",
+        "benefits",
+        "care",
+        "specifications",
+        "safetyNote"
+      ].map(
+        (k, i) => `<label class="field">${["Descri\xE7\xE3o", "Materiais confirmados", "Vantagens", "Limita\xE7\xF5es e cuidados", "Informa\xE7\xF5es adicionais", "Registro da valida\xE7\xE3o de materiais e seguran\xE7a para a esp\xE9cie"][i]}<textarea name="${k}">${e(p[k] || "")}</textarea></label>`
+      ).join("")}
+    <div class="form-grid">
+      ${[
+        ["weight", "Peso embalado (kg)"],
+        ["width", "Largura (cm)"],
+        ["height", "Altura (cm)"],
+        ["length", "Comprimento (cm)"],
+        ["productionDays", "Dias \xFAteis de produ\xE7\xE3o"]
+      ].map(
+        ([k, l]) => field(l, k, "number", p[k] ?? "", 'min="0" step="0.01"')
+      ).join("")}
+    </div>
+    <label class="field"
+      >Fotos (endere\xE7os separados por linha)<textarea name="images">
+${e(p.images.join("\n"))}</textarea
+      ></label
+    ><label class="field"
+      >Adicionar fotografia<input
+        type="file"
+        accept="image/png,image/jpeg,image/webp"
+        data-upload /></label
+    ><label class="field"
+      >Varia\xE7\xF5es (uma por linha)<textarea name="variants">
+${e(p.variants.join("\n"))}</textarea
+      ></label
+    ><label class="field"
+      >Materiais para filtros (um por linha)<textarea name="materialTags">
+${e(p.materialTags.join("\n"))}</textarea
+      ></label
+    ><label class="field"
+      >Tradu\xE7\xF5es do cat\xE1logo (JSON: en e es)<textarea
+        name="translations"
+        class="code-input"
+      >
+${e(JSON.stringify(p.translations || {}, null, 2))}</textarea
+      ></label
+    ><label class="check"
+      ><input
+        type="checkbox"
+        name="active"
+        ${p.active ? "checked" : ""}
+      />Vis\xEDvel no cat\xE1logo</label
+    ><label class="check"
+      ><input
+        type="checkbox"
+        name="approved"
+        ${p.approved ? "checked" : ""}
+      />Materiais e adequa\xE7\xE3o \xE0 esp\xE9cie confirmados; liberar venda</label
+    >${errorBox()}<button class="btn">Salvar produto</button>
+  </form>`
+    );
+  }
+
+  // simples-src/accessibility.js
+  var defaults = {
+    size: 100,
+    contrast: false,
+    letters: false,
+    words: false,
+    lines: false,
+    motion: false
+  };
+  var prefs = { ...defaults, ...load("ecopet-accessibility", {}) };
+  var stream;
+  var landmarker;
+  var frame;
+  var lastY = null;
+  function apply() {
+    const root = document.documentElement;
+    root.style.setProperty("--font-size", `${16 * prefs.size / 100}px`);
+    root.style.setProperty("--letter", prefs.letters ? ".08em" : "normal");
+    root.style.setProperty("--word", prefs.words ? ".16em" : "normal");
+    root.style.setProperty("--leading", prefs.lines ? "2" : "1.65");
+    root.classList.toggle("contrast", prefs.contrast);
+    root.classList.toggle("reduce-motion", prefs.motion);
+    save("ecopet-accessibility", prefs);
+  }
+  function render() {
+    const panel = $("#access-panel");
+    panel.innerHTML = /* HTML */
+    `<button
+      class="icon close"
+      data-access-close
+      aria-label="Fechar acessibilidade"
+    >
+      \xD7
+    </button>
+    <h2 id="access-title">Acessibilidade</h2>
+    <p>Ajuste a navega\xE7\xE3o ao seu jeito.</p>
+    <h3>Tamanho do texto</h3>
+    <div class="access-controls">
+      <button data-access-size="-10" aria-label="Diminuir fonte">A\u2212</button
+      ><button data-access-size="10" aria-label="Aumentar fonte">A+</button
+      ><button data-access-size="0">Original</button
+      ><span id="font-percent">${prefs.size}%</span>
+    </div>
+    <h3>Leitura e conforto</h3>
+    <div class="form">
+      ${[
+      ["contrast", "Alto contraste"],
+      ["letters", "Espa\xE7ar letras"],
+      ["words", "Espa\xE7ar palavras"],
+      ["lines", "Aumentar entrelinhas"],
+      ["motion", "Reduzir anima\xE7\xF5es"]
+    ].map(
+      ([k, l]) => `<label class="check"><input type="checkbox" data-access-pref="${k}" ${prefs[k] ? "checked" : ""}>${l}</label>`
+    ).join("")}
+    </div>
+    <h3>Leitor de texto</h3>
+    <p class="muted">L\xEA o conte\xFAdo da p\xE1gina em voz alta ap\xF3s seu comando.</p>
+    <div class="access-controls">
+      <button data-speech="read">Ler texto</button
+      ><button data-speech="pause">Pausar</button
+      ><button data-speech="resume">Continuar</button
+      ><button data-speech="stop">Parar</button>
+    </div>
+    <h3>Libras</h3>
+    <button class="btn secondary" data-vlibras>Ativar VLibras</button>
+    <p id="vlibras-status" class="muted" role="status">
+      Tradu\xE7\xE3o autom\xE1tica para Libras pelo servi\xE7o oficial.
+    </p>
+    <h3>Controle por gestos</h3>
+    <p class="muted">
+      Opcional. Solicita c\xE2mera, processa a m\xE3o neste dispositivo e n\xE3o grava
+      imagens. M\xE3o aberta: mova para cima ou para baixo para rolar. Feche a m\xE3o
+      para parar.
+    </p>
+    <div class="access-controls">
+      <button data-gesture="start">Ativar c\xE2mera</button
+      ><button data-gesture="stop">Desligar c\xE2mera</button>
+    </div>
+    <p id="gesture-status" role="status">C\xE2mera desligada.</p>
+    <video id="gesture-video" autoplay muted playsinline hidden></video>
+    <h3>Restaurar</h3>
+    <button class="btn secondary" data-access-reset>
+      Restaurar configura\xE7\xF5es
+    </button>
+    <p class="muted">
+      Voc\xEA tamb\xE9m pode usar Tab, Shift + Tab, Enter, Espa\xE7o e Escape. As
+      prefer\xEAncias n\xE3o sens\xEDveis s\xE3o salvas neste navegador.
+    </p>`;
+  }
+  function stopGesture() {
+    cancelAnimationFrame(frame);
+    stream?.getTracks().forEach((t2) => t2.stop());
+    stream = null;
+    landmarker?.close();
+    landmarker = null;
+    lastY = null;
+    const video = $("#gesture-video");
+    if (video) {
+      video.srcObject = null;
+      video.hidden = true;
+    }
+    if ($("#gesture-status"))
+      $("#gesture-status").textContent = "C\xE2mera desligada.";
+  }
+  async function startGesture() {
+    if (!navigator.mediaDevices?.getUserMedia || !window.isSecureContext) {
+      $("#gesture-status").textContent = "Este navegador exige c\xE2mera compat\xEDvel e HTTPS (ou localhost). Use teclado, toque ou mouse.";
+      return;
+    }
+    stopGesture();
+    $("#gesture-status").textContent = "Carregando reconhecimento da m\xE3o\u2026";
+    try {
+      const { FilesetResolver, HandLandmarker } = await import("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22/vision_bundle.mjs");
+      const files = await FilesetResolver.forVisionTasks(
+        "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22/wasm"
+      );
+      landmarker = await HandLandmarker.createFromOptions(files, {
+        baseOptions: {
+          modelAssetPath: "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task"
+        },
+        runningMode: "VIDEO",
+        numHands: 1
+      });
+      stream = await navigator.mediaDevices.getUserMedia({
+        video: { width: 640, height: 480 },
+        audio: false
+      });
+      const video = $("#gesture-video");
+      video.srcObject = stream;
+      video.hidden = false;
+      await video.play();
+      $("#gesture-status").textContent = "C\xE2mera ativa. Feche a m\xE3o para parar. Nenhuma imagem \xE9 gravada.";
+      let lastTime = -1;
+      const loop = () => {
+        if (!stream || !landmarker) return;
+        try {
+          if (video.currentTime !== lastTime) {
+            lastTime = video.currentTime;
+            const hands = landmarker.detectForVideo(
+              video,
+              performance.now()
+            ).landmarks;
+            if (hands.length) {
+              const hand = hands[0];
+              const open = [8, 12, 16, 20].filter(
+                (i) => Math.hypot(hand[i].x - hand[0].x, hand[i].y - hand[0].y) > Math.hypot(
+                  hand[i - 2].x - hand[0].x,
+                  hand[i - 2].y - hand[0].y
+                ) * 1.15
+              ).length >= 3;
+              const y = hand[9].y;
+              if (open && lastY !== null) {
+                const delta = (y - lastY) * 1e3;
+                if (Math.abs(delta) > 5)
+                  window.scrollBy(0, Math.max(-45, Math.min(45, delta)));
+              }
+              lastY = open ? y : null;
+            } else lastY = null;
+          }
+        } catch {
+          stopGesture();
+          return;
+        }
+        frame = requestAnimationFrame(loop);
+      };
+      frame = requestAnimationFrame(loop);
+      $("#access-panel").close();
+      const indicator = document.createElement("button");
+      indicator.id = "camera-indicator";
+      indicator.className = "btn";
+      indicator.style.cssText = "position:fixed;bottom:80px;right:16px;z-index:80";
+      indicator.textContent = "C\xE2mera ativa \xB7 Desligar";
+      indicator.onclick = () => {
+        stopGesture();
+        indicator.remove();
+      };
+      document.body.append(indicator);
+    } catch {
+      stopGesture();
+      $("#gesture-status").textContent = "N\xE3o foi poss\xEDvel ativar a c\xE2mera ou carregar o reconhecimento. Use toque, mouse ou teclado.";
+    }
+  }
+  function initAccessibility() {
+    apply();
+    render();
+    $("#access-open").onclick = () => {
+      render();
+      $("#access-panel").showModal();
+    };
+    document.addEventListener("click", async (event) => {
+      const b = event.target.closest("button");
+      if (!b) return;
+      if (b.hasAttribute("data-access-close")) $("#access-panel").close();
+      if (b.hasAttribute("data-access-size")) {
+        const change = Number(b.dataset.accessSize);
+        prefs.size = change ? Math.min(200, Math.max(80, prefs.size + change)) : 100;
+        apply();
+        $("#font-percent").textContent = prefs.size + "%";
+      }
+      if (b.hasAttribute("data-access-reset")) {
+        prefs = { ...defaults };
+        apply();
+        render();
+        stopGesture();
+        $("#camera-indicator")?.remove();
+        window.speechSynthesis?.cancel();
+        toast("Configura\xE7\xF5es restauradas.");
+      }
+      if (b.dataset.speech) {
+        if (!("speechSynthesis" in window)) {
+          toast("Leitura em voz n\xE3o dispon\xEDvel neste navegador.");
+          return;
+        }
+        const synth = window.speechSynthesis;
+        if (b.dataset.speech === "read") {
+          synth.cancel();
+          const text = $("#main").innerText;
+          const chunks = text.match(/[^.!?\n]+[.!?\n]?/g) || [text];
+          for (const c of chunks) {
+            const u = new SpeechSynthesisUtterance(c);
+            u.lang = state.language;
+            synth.speak(u);
+          }
+        }
+        if (b.dataset.speech === "pause") synth.pause();
+        if (b.dataset.speech === "resume") synth.resume();
+        if (b.dataset.speech === "stop") synth.cancel();
+      }
+      if (b.hasAttribute("data-vlibras")) {
+        const status = $("#vlibras-status");
+        status.textContent = "Carregando VLibras\u2026";
+        try {
+          if (!window.VLibras) {
+            await new Promise((resolve, reject) => {
+              const script = document.createElement("script");
+              script.src = "https://vlibras.gov.br/app/vlibras-plugin.js";
+              script.onload = resolve;
+              script.onerror = reject;
+              document.head.append(script);
+              setTimeout(() => reject(new Error("timeout")), 15e3);
+            });
+          }
+          if (!document.querySelector("[vw]")) {
+            const node = document.createElement("div");
+            node.setAttribute("vw", "");
+            node.className = "enabled";
+            node.innerHTML = '<div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>';
+            document.body.append(node);
+            new window.VLibras.Widget("https://vlibras.gov.br/app");
+          }
+          status.textContent = "VLibras ativado. Use o bot\xE3o oficial de Libras.";
+          $("#access-panel").close();
+        } catch {
+          status.textContent = "VLibras indispon\xEDvel no momento. Tente novamente mais tarde.";
+        }
+      }
+      if (b.dataset.gesture === "start") await startGesture();
+      if (b.dataset.gesture === "stop") {
+        stopGesture();
+        $("#camera-indicator")?.remove();
+      }
+    });
+    document.addEventListener("change", (event) => {
+      const k = event.target.dataset.accessPref;
+      if (k) {
+        prefs[k] = event.target.checked;
+        apply();
+      }
+    });
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        stopGesture();
+        $("#camera-indicator")?.remove();
+      }
+    });
+    window.addEventListener("pagehide", () => {
+      stopGesture();
+      window.speechSynthesis?.cancel();
+    });
+  }
+
+  // simples-src/app.js
+  var nav = [
+    ["", "In\xEDcio"],
+    ["produtos", "Produtos"],
+    ["categorias", "Categorias"],
+    ["sobre", "Sobre n\xF3s"],
+    ["sustentabilidade", "Sustentabilidade"],
+    ["ecotroca", "EcoTroca"],
+    ["contato", "Contato"]
+  ];
+  var routing = 0;
+  function header() {
+    const count = state.cart.reduce((n, i) => n + i.quantity, 0);
+    $("#header").innerHTML = `<div class="container header-top"><a href="#/" class="brand" aria-label="EcoPet \u2014 in\xEDcio"><img src="assets/logo-ecopet.png" alt="EcoPet"></a><form id="search-form" class="search" role="search"><label class="sr-only" for="search">${t("Pesquisar produtos")}</label><input type="search" id="search" name="q" placeholder="${t("Pesquisar produtos")}\u2026"><button aria-label="Pesquisar">${icon("search")}</button></form><div class="header-actions">${state.user ? `<details class="account-menu"><summary class="account-link">${icon("user")}<span>Ol\xE1, ${e(state.user.name.split(" ")[0])}<small>Minha EcoPet</small></span></summary><nav>${[
+      ["conta", "Minha conta"],
+      ["pedidos", "Meus pedidos"],
+      ["enderecos", "Meus endere\xE7os"],
+      ["favoritos", "Favoritos"]
+    ].map(([p, l]) => `<a href="#/${p}">${t(l)}</a>`).join(
+      ""
+    )}${state.user.role === "admin" ? '<a href="#/admin">Administra\xE7\xE3o</a>' : ""}<button data-logout>${t("Sair")}</button></nav></details>` : `<a href="#/login" class="account-link">${icon("user")}<span>${t("Entrar / Criar conta")}<small>Minha EcoPet</small></span></a>`}<a href="#/notificacoes" class="icon" aria-label="${t("Notifica\xE7\xF5es")}">${icon("bell")}</a><a href="#/favoritos" class="icon" aria-label="${t("Favoritos")}">${icon("heart")}</a><a href="#/carrinho" class="icon" aria-label="${t("Carrinho")}, ${count} itens">${icon("cart")}<span class="badge">${count}</span></a></div></div><nav class="nav" aria-label="Navega\xE7\xE3o principal">${nav.map(([p, l]) => `<a href="#/${p}" ${location.hash.split("?")[0] === "#/" + p ? 'aria-current="page"' : ""}>${t(l)}</a>`).join("")}</nav>`;
+  }
+  function footer() {
+    const cols = [
+      [
+        "Institucional",
+        [
+          ["sobre", "Sobre n\xF3s"],
+          ["sobre", "Nossa hist\xF3ria"],
+          ["sustentabilidade", "Sustentabilidade"],
+          ["ecotroca", "EcoTroca"]
+        ]
+      ],
+      [
+        "Atendimento",
+        [
+          ["contato", "Fale conosco"],
+          ["ajuda", "D\xFAvidas frequentes"],
+          ["entrega", "Entrega"],
+          ["trocas", "Trocas e devolu\xE7\xF5es"],
+          ["pedidos", "Acompanhar pedido"]
+        ]
+      ],
+      [
+        "Minha conta",
+        [
+          ["login", "Entrar"],
+          ["cadastro", "Criar conta"],
+          ["pedidos", "Meus pedidos"],
+          ["favoritos", "Favoritos"]
+        ]
+      ],
+      [
+        "Informa\xE7\xF5es",
+        [
+          ["privacidade", "Pol\xEDtica de privacidade"],
+          ["termos", "Termos de uso"],
+          ["entrega", "Pol\xEDtica de entrega"],
+          ["trocas", "Trocas e devolu\xE7\xF5es"],
+          ["pagamento", "Formas de pagamento"]
+        ]
+      ]
+    ];
+    $("#footer").innerHTML = `<div class="container"><div class="footer-grid"><div><a href="#/"><img src="assets/logo-ecopet.png" alt="Logo oficial EcoPet"></a><p>Amor que cuida,<br>escolhas que transformam.</p><a href="${e(state.config.company.instagram)}" target="_blank" rel="noopener noreferrer">@ecopet.oficial0 \u2197</a>${state.config.company.tiktok ? `<p><a href="${e(state.config.company.tiktok)}" target="_blank" rel="noopener noreferrer">TikTok \u2197</a></p>` : ""}</div>${cols.map(([title, links]) => `<div><h3>${t(title)}</h3><nav>${links.map(([p, l]) => `<a href="#/${p}">${t(l)}</a>`).join("")}</nav></div>`).join("")}</div><div class="footer-bottom"><span>\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()} EcoPet \xB7 Cuidado em cada escolha.</span><label>Idioma / Language / Idioma <select id="language"><option value="pt-BR" ${state.language === "pt-BR" ? "selected" : ""}>Portugu\xEAs brasileiro</option><option value="en" ${state.language === "en" ? "selected" : ""}>English</option><option value="es" ${state.language === "es" ? "selected" : ""}>Espa\xF1ol</option></select></label></div></div>`;
+  }
+  function requireLogin(path) {
+    if (state.user) return false;
+    safeSession.setItem("ecopet-return", path);
+    location.hash = "/login";
+    return true;
+  }
+  async function route() {
+    const current = ++routing;
+    stopPaymentTimers();
+    window.speechSynthesis?.cancel();
+    const raw = location.hash.slice(1) || "/", [path, query = ""] = raw.split("?"), parts = path.split("/").filter(Boolean), page = parts[0] || "", params = new URLSearchParams(query);
+    if (['checkout','pagar','pedidos','pedido'].includes(page)) {
+      if (['pedidos','pedido'].includes(page) && requireLogin(raw)) return;
+      $('#main').innerHTML = ['checkout','pagar'].includes(page) ? demoCheckout() : demoOrderPage(parts[1]);
+      header();footer();$('#main').removeAttribute('aria-busy');window.scrollTo(0,0);return;
+    }
+    if (["recuperar", "nova-senha", "confirmar-email", "enderecos", "pedidos", "pedido", "checkout", "pagar", "admin"].includes(page)) {
+      const titles = { login: "Entrar na EcoPet", cadastro: "Criar conta", checkout: "Finaliza\xE7\xE3o da compra", pagar: "Pagamento", admin: "Administra\xE7\xE3o protegida", pedidos: "Meus pedidos", pedido: "Acompanhar pedido", enderecos: "Meus endere\xE7os", conta: "Minha conta", recuperar: "Recuperar senha" };
+      $("#main").innerHTML = `<section class="container section"><span class="eyebrow">EcoPet \xB7 vers\xE3o que abre pelo index</span><h1>${titles[page] || "Acesso \xE0 conta"}</h1>
+      <div class="notice"><strong>Esta etapa precisa de uma conex\xE3o com o servidor da loja.</strong><p>Este arquivo abre diretamente no seu computador. Voc\xEA pode explorar produtos e montar o carrinho, mas contas, endere\xE7os, pedidos, frete e pagamentos reais precisam da vers\xE3o hospedada online.</p></div>
+      ${["checkout", "pagar"].includes(page) ? `<ol class="steps">${["Identifica\xE7\xE3o", "Endere\xE7o", "Entrega", "Revis\xE3o", "Pagamento", "Confirma\xE7\xE3o"].map((x, i) => `<li>${i + 1}. ${x}</li>`).join("")}</ol><div class="panel"><h2>Seu carrinho est\xE1 preservado.</h2><p>${state.cart.reduce((s, i) => s + i.quantity, 0)} item(ns) \xB7 Subtotal: <strong>${money(state.cart.reduce((s, i) => s + (state.products.find((p) => p.id === i.id)?.price || 0) * i.quantity, 0))}</strong></p><p>Frete n\xE3o calculado. Nenhuma cobran\xE7a criada. Pix e cart\xE3o s\xF3 aparecem com dados verdadeiros do provedor na loja online.</p></div>` : `<div class="panel"><img src="assets/logo-ecopet.png" alt="EcoPet" style="width:100px;margin-bottom:20px"><h2>Seus dados merecem cuidado.</h2><p>N\xE3o \xE9 solicitado e-mail, senha, endere\xE7o nem cart\xE3o neste modo local. O painel administrativo tamb\xE9m n\xE3o \xE9 liberado por uma senha fict\xEDcia.</p></div>`}
+      <div class="buttons" style="margin-top:24px"><a href="#/carrinho" class="btn">Voltar ao carrinho</a><a href="#/produtos" class="btn secondary">Continuar comprando</a><a href="#/contato">Contato oficial</a></div></section>`;
+      header();
+      footer();
+      $("#main").removeAttribute("aria-busy");
+      window.scrollTo(0, 0);
+      return;
+    }
+    if ([
+      "conta",
+      "enderecos",
+      "pedidos",
+      "pedido",
+      "checkout",
+      "pagar",
+      "admin"
+    ].includes(page) && requireLogin(raw))
+      return;
+    $("#main").setAttribute("aria-busy", "true");
+    try {
+      let html;
+      if (page === "") html = home();
+      else if (page === "produtos") html = catalog(params);
+      else if (page === "favoritos") html = catalog(params, true);
+      else if (page === "produto") html = detail(parts[1]);
+      else if (page === "carrinho") html = cart();
+      else if (page === "sobre") html = about();
+      else if (page === "categorias")
+        html = /* HTML */
+        `<section class="container section">
+        <h1>${t("Categorias")}</h1>
+        ${animalGrid()}
+      </section>`;
+      else if (page === "login" || page === "cadastro") {
+        if (state.user) {
+          location.hash = "/conta";
+          return;
+        }
+        html = login(page === "cadastro");
+      } else if (page === "recuperar" || page === "nova-senha")
+        html = recovery(parts[1]);
+      else if (page === "confirmar-email") {
+        await api("/auth/verify", "POST", { token: parts[1] });
+        state.user = (await api("/session")).user;
+        html = '<section class="container section"><div class="panel"><h1>E-mail confirmado.</h1><p>Seu cadastro foi confirmado.</p><a class="btn" href="#/conta">Minha conta</a></div></section>';
+      } else if (page === "conta") html = await account();
+      else if (page === "enderecos") html = await addresses();
+      else if (page === "notificacoes") html = await notifications();
+      else if (page === "pedidos") html = await orders();
+      else if (page === "pedido") html = await order(parts[1]);
+      else if (page === "checkout") html = await checkoutPage();
+      else if (page === "pagar") html = await paymentPage(parts[1]);
+      else if (page === "admin")
+        html = await adminPage(parts[1] || "dashboard", params);
+      else if (page === "avaliacoes") {
+        const reviews = await api("/reviews");
+        html = /* HTML */
+        `<section class="container section">
+        <h1>Avalia\xE7\xF5es de clientes</h1>
+        ${reviews.length ? `<div class="panels">${reviews.map((r) => `<article class="panel"><h3>${e(r.name)} \xB7 ${r.rating}/5</h3><p>${e(r.text)}</p><small>Compra verificada \xB7 ${date(r.created_at)}</small></article>`).join("")}</div>` : '<div class="empty">Ainda n\xE3o h\xE1 avalia\xE7\xF5es publicadas. Elas ser\xE3o exibidas ap\xF3s compras verificadas e modera\xE7\xE3o.</div>'}
+      </section>`;
+      } else if ([
+        "contato",
+        "ajuda",
+        "privacidade",
+        "termos",
+        "entrega",
+        "trocas",
+        "pagamento",
+        "ecotroca",
+        "sustentabilidade",
+        "embalagens"
+      ].includes(page))
+        html = information(page);
+      else
+        html = '<section class="container section"><h1>P\xE1gina n\xE3o encontrada.</h1><a class="btn" href="#/">Voltar ao in\xEDcio</a></section>';
+      if (current !== routing) return;
+      $("#main").innerHTML = (state.language !== "pt-BR" ? `<div class="container translated-notice" role="note">${state.language === "en" ? "Translation preview: navigation and shopping controls are translated. Editorial, account, accessibility and admin content may remain in Portuguese; product translations appear when registered." : "Vista de traducci\xF3n: navegaci\xF3n y controles de compra traducidos. Los textos editoriales, de cuenta, accesibilidad y administraci\xF3n pueden permanecer en portugu\xE9s; el cat\xE1logo utiliza traducciones cuando est\xE1n registradas."}</div>` : "") + html;
+      document.title = (page ? `${{ produto: "Produto", produtos: "Produtos", carrinho: "Carrinho", admin: "Administra\xE7\xE3o" }[page] || page.charAt(0).toUpperCase() + page.slice(1)} \xB7 ` : "") + "EcoPet";
+      header();
+      footer();
+      window.scrollTo(0, 0);
+      $("#main").focus({ preventScroll: true });
+    } catch (error) {
+      if (current !== routing) return;
+      $("#main").innerHTML = `<section class="container section"><div class="panel"><h1>N\xE3o foi poss\xEDvel abrir esta p\xE1gina.</h1><p role="alert">${e(error.message)}</p><button class="btn" data-retry>Tentar novamente</button><a href="#/">Voltar ao in\xEDcio</a></div></section>`;
+    } finally {
+      if (current === routing) $("#main").removeAttribute("aria-busy");
+    }
+  }
+  async function syncFavorites() {
+    if (!state.user || state.user.local) return;
+    const server = await api("/favorites");
+    for (const id of state.favorites)
+      if (!server.includes(id)) await api("/favorites", "POST", { id });
+    state.favorites = [.../* @__PURE__ */ new Set([...server, ...state.favorites])];
+    save("ecopet-favorites-v2", state.favorites);
+  }
+  function addProduct(id) {
+    const p = state.products.find((p2) => p2.id === id);
+    if (!p) return;
+    const variant = $("#product-variant")?.value || "";
+    if (p.variants.length && !p.variants.includes(variant)) {
+      location.hash = "/produto/" + id;
+      toast("Escolha a varia\xE7\xE3o do produto.");
+      return false;
+    }
+    const quantity = Number($("#detail-quantity")?.value || 1);
+    if (!Number.isInteger(quantity) || quantity < 1 || quantity > 99) {
+      toast("Quantidade inv\xE1lida.");
+      return false;
+    }
+    const existing = state.cart.find((i) => i.id === id);
+    if (existing && existing.variant !== variant) {
+      toast(
+        "H\xE1 outra varia\xE7\xE3o deste produto no carrinho. Remova-a antes de trocar."
+      );
+      return false;
+    }
+    if (existing) existing.quantity = Math.min(99, existing.quantity + quantity);
+    else state.cart.push({ id, quantity, variant });
+    persistCart();
+    toast(t("Produto adicionado ao carrinho"), true);
+    return true;
+  }
+  document.addEventListener("click", async (event) => {
+    const b = event.target.closest("button,[data-buy]");
+    if (!b) return;
+    try {
+      if (b.dataset.add) addProduct(b.dataset.add);
+      if (b.dataset.buy && addProduct(b.dataset.buy)) location.hash = "/checkout";
+      if (b.dataset.favorite) {
+        const id = b.dataset.favorite, remove = state.favorites.includes(id);
+        if (state.user && !state.user.local) await api("/favorites", "POST", { id, remove });
+        state.favorites = remove ? state.favorites.filter((x) => x !== id) : [...state.favorites, id];
+        save("ecopet-favorites-v2", state.favorites);
+        b.setAttribute("aria-pressed", String(!remove));
+        toast(
+          remove ? "Produto removido dos favoritos." : t("Produto salvo nos favoritos"),
+          true
+        );
+      }
+      if (b.dataset.cartQty) {
+        const item = state.cart.find((i) => i.id === b.dataset.cartQty);
+        item.quantity = Math.min(99, item.quantity + Number(b.dataset.change));
+        state.cart = state.cart.filter((i) => i.quantity > 0);
+        persistCart();
+        await route();
+      }
+      if (b.dataset.remove) {
+        state.cart = state.cart.filter((i) => i.id !== b.dataset.remove);
+        persistCart();
+        await route();
+      }
+      if (b.dataset.detailQty) {
+        const q = $("#detail-quantity");
+        q.value = Math.max(
+          1,
+          Math.min(99, Number(q.value) + Number(b.dataset.detailQty))
+        );
+      }
+      if (b.dataset.zoom) {
+        $("#zoom-photo").src = b.dataset.zoom;
+        $("#zoom-photo").alt = $("#product-main-image")?.alt || "Produto EcoPet";
+        $("#image-zoom").showModal();
+      }
+      if (b.dataset.thumbnail) {
+        $("#product-main-image").src = b.dataset.thumbnail;
+        $(".detail-photo").dataset.zoom = b.dataset.thumbnail;
+      }
+      if (b.hasAttribute("data-close-dialog")) b.closest("dialog").close();
+      if (b.hasAttribute("data-show-password")) {
+        const input = b.previousElementSibling;
+        input.type = input.type === "password" ? "text" : "password";
+        b.textContent = input.type === "password" ? "Mostrar" : "Ocultar";
+      }
+      if (b.hasAttribute("data-logout")) {
+        save("ecopet-local-active", false);
+        state.user = null;
+        location.hash = "/login";
+        toast("Você saiu da conta.");
+      }
+      if (b.hasAttribute("data-resend")) {
+        const r = await api("/account/verify", "POST", {});
+        toast(r.message);
+        await route();
+      }
+      if (b.hasAttribute("data-cep")) {
+        const form = b.closest("form"), cep = form.elements.cep.value.replace(/\D/g, "");
+        try {
+          const address = await api("/cep?cep=" + cep);
+          for (const [k, v] of Object.entries(address))
+            if (form.elements[k]) form.elements[k].value = v;
+          toast("Endere\xE7o preenchido. Confira os dados e informe o n\xFAmero.");
+        } catch (err) {
+          setError(form, err);
+        }
+      }
+      if (b.dataset.addressDelete) {
+        await api("/addresses", "DELETE", { id: b.dataset.addressDelete });
+        await route();
+      }
+      if (b.dataset.read) {
+        if (b.dataset.remote === "true")
+          await api("/notifications", "POST", { id: b.dataset.read });
+        else {
+          const n = state.localNotifications.find((n2) => n2.id === b.dataset.read);
+          if (n) n.read = 1;
+          save("ecopet-notifications-v2", state.localNotifications);
+        }
+        await route();
+      }
+      if (b.dataset.checkoutBack) {
+        checkoutBack(Number(b.dataset.checkoutBack));
+        await route();
+      }
+      if (b.hasAttribute("data-copy-pix")) {
+        await navigator.clipboard.writeText($("#pix-code").value);
+        toast("C\xF3digo Pix copiado.");
+      }
+      if (b.dataset.refreshOrder) {
+        await api(`/orders/${b.dataset.refreshOrder}/refresh`, "POST", {});
+        toast("Status consultado no provedor.");
+        await route();
+      }
+      if (b.dataset.renewPix) {
+        await api(`/orders/${b.dataset.renewPix}/renew`, "POST", {});
+        await route();
+      }
+      if (b.dataset.cancelOrder) {
+        await api(`/orders/${b.dataset.cancelOrder}/cancel`, "POST", {});
+        toast("Pedido cancelado.");
+        await route();
+      }
+      if (b.hasAttribute("data-export")) {
+        const data = await api("/account/export"), url = URL.createObjectURL(
+          new Blob([JSON.stringify(data, null, 2)], {
+            type: "application/json"
+          })
+        ), a = document.createElement("a");
+        a.href = url;
+        a.download = "meus-dados-ecopet.json";
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1e3);
+      }
+      if (b.hasAttribute("data-new-product")) {
+        $("#new-product").innerHTML = '<div class="panel">' + productForm() + "</div>";
+      }
+      if (b.dataset.reviewId) {
+        await api("/admin/reviews", "POST", {
+          id: b.dataset.reviewId,
+          approved: b.dataset.approved === "true"
+        });
+        await route();
+      }
+      if (b.hasAttribute("data-retry")) await route();
+    } catch (error) {
+      toast(error.message);
+    }
+  });
+  document.addEventListener("change", async (event) => {
+    if (event.target.id === "language") {
+      state.language = event.target.value;
+      save("ecopet-language", state.language);
+      document.documentElement.lang = state.language;
+      await route();
+    }
+    if (event.target.id === "sort-products") {
+      const params = new URLSearchParams(location.hash.split("?")[1] || "");
+      params.set("sort", event.target.value);
+      location.hash = "/produtos?" + params;
+    }
+    if (event.target.hasAttribute("data-upload")) {
+      const input = event.target, file = input.files[0];
+      if (!file) return;
+      try {
+        if (file.size > 5 * 1024 * 1024)
+          throw new Error("Use uma imagem de at\xE9 5 MB.");
+        const data = await new Promise((resolve, reject) => {
+          const r = new FileReader();
+          r.onload = () => resolve(r.result);
+          r.onerror = reject;
+          r.readAsDataURL(file);
+        });
+        const result = await api("/admin/upload", "POST", { data });
+        const area = input.closest("form").elements.images;
+        area.value = (area.value + "\n" + result.url).trim();
+        toast("Imagem enviada. Salve o produto para vincul\xE1-la.");
+      } catch (err) {
+        toast(err.message);
+      }
+    }
+  });
+  document.addEventListener("submit", async (event) => {
+    const form = event.target;
+    event.preventDefault();
+    const submit = form.querySelector('button[type="submit"],button:not([type])');
+    if (submit) submit.disabled = true;
+    const b = formData(form);
+    form.querySelector("[data-error]")?.replaceChildren();
+    try {
+      if (form.id === 'demo-register') {
+        if (!form.checkValidity()) {form.reportValidity();return;}
+        if (String(b.cpf).replace(/\D/g,'').length !== 11) throw new Error('Use um CPF com 11 números, por exemplo 000.000.000-00.');
+        const persisted = updateLocalProfile(b.name);
+        form.reset();
+        toast(persisted ? 'Cadastro criado!' : 'Perfil criado para esta página. O navegador bloqueou o armazenamento.');
+        header();location.hash = state.cart.length ? '/checkout' : '/conta';return;
+      }
+      if (form.id === 'demo-address') {
+        if (!form.checkValidity()) {form.reportValidity();return;}
+        demo.address = {...b, uf:b.uf.toUpperCase()};demo.step=2;demo.completed=false;
+        await route();return;
+      }
+      if (form.id === 'demo-card') {
+        if (!form.checkValidity()) {form.reportValidity();return;}
+        if (String(b.card).replace(/\D/g,'') !== '4111111111111111' || b.expiry !== '12/30' || b.cvv !== '123') throw new Error('Confira os dados de exemplo: 4111 1111 1111 1111, validade 12/30 e código 123.');
+        form.reset();await finishDemo('card');return;
+      }
+      if(form.id === 'ecotroca-form') {
+        if(!form.checkValidity()){form.reportValidity();return;}
+        const files=Array.from(form.elements.photos.files);validateEcoPhotos(files);
+        const product=state.products.find(p=>p.id===b.product);
+        if(!product)throw new Error('Selecione um produto do catálogo.');
+        $('#ecotroca-review').innerHTML=`<section class="panel" style="margin-top:24px" tabindex="-1"><h2>Confira sua solicitação</h2><p><strong>${e(b.name)}</strong><br>${e(b.email)} · ${e(b.phone)}<br>${e(b.city)}</p><h3>${e(product.name)}</h3><p>${e(b.condition)}</p><p style="white-space:pre-wrap">${e(b.description)}</p><p>${files.length} foto(s) selecionada(s).</p><p>O canal de recebimento da EcoPet ainda está sendo configurado. Seus dados e fotos não foram enviados.</p><button class="btn" disabled>Envio disponível após configuração</button></section>`;
+        $('#ecotroca-review section').focus();return;
+      }
+      if (form.id === "search-form") {
+        location.hash = "/produtos?q=" + encodeURIComponent(b.q);
+        return;
+      }
+      if (form.id === "filter-form") {
+        location.hash = "/produtos?" + new URLSearchParams(b);
+        return;
+      }
+      if (["local-register-form", "local-profile-form", "local-login-form"].includes(form.id)) {
+        const name = form.id === "local-login-form" ? localProfile()?.name : b.name;
+        if (!name) throw new Error("Crie sua conta primeiro.");
+        const persisted = updateLocalProfile(name);
+        const message = form.id === "local-profile-form" ? "Perfil atualizado." : form.id === "local-login-form" ? "Perfil local aberto." : "Cadastro local criado!";
+        toast(persisted ? message : message + " O navegador bloqueou o armazenamento; o perfil ficar\xE1 dispon\xEDvel s\xF3 enquanto esta p\xE1gina estiver aberta.");
+        header();
+        if (location.hash === "#/conta") await route();
+        else location.hash = "/conta";
+        return;
+      }
+      if (form.id === "login-form" || form.id === "register-form") {
+        const result = await api(
+          "/auth/" + (form.id === "login-form" ? "login" : "register"),
+          "POST",
+          { ...b, privacy: !!b.privacy }
+        );
+        state.user = result.user;
+        await syncFavorites();
+        toast(form.id === "login-form" ? "Login realizado." : result.message);
+        const next = safeSession.getItem("ecopet-return") || "/conta";
+        safeSession.removeItem("ecopet-return");
+        location.hash = next;
+        return;
+      }
+      if (form.id === "forgot-form") {
+        const r = await api("/auth/forgot", "POST", b);
+        form.querySelector("[data-result]").textContent = r.message;
+        return;
+      }
+      if (form.id === "reset-form") {
+        await api("/auth/reset", "POST", { ...b, token: form.dataset.token });
+        state.user = null;
+        toast("Senha alterada. Entre novamente.");
+        location.hash = "/login";
+        return;
+      }
+      if (form.id === "profile-form") {
+        await api("/account", "PATCH", b);
+        state.user = (await api("/session")).user;
+        toast("Dados atualizados.");
+        await route();
+        return;
+      }
+      if (form.id === "password-form") {
+        await api("/account/password", "POST", b);
+        state.user = null;
+        toast("Senha atualizada. Entre novamente.");
+        location.hash = "/login";
+        return;
+      }
+      if (form.id === "address-form") {
+        await api("/addresses", "POST", b);
+        toast("Endere\xE7o atualizado.");
+        await route();
+        return;
+      }
+      if (form.id === "coupon-form") {
+        const result = await api("/cart/preview", "POST", {
+          items: state.cart,
+          coupon: b.coupon
+        });
+        safeSession.setItem("ecopet-coupon", b.coupon.trim().toUpperCase());
+        $("#coupon-result").textContent = result.discount ? 'CUPETE10 · Desconto: ' + money(result.discount) : 'Cupom removido.';
+        $("#cart-total").textContent = money(demoTotals().total);
+        toast(result.discount ? "Cupom aplicado." : "Cupom removido.");
+        return;
+      }
+      if (form.id === "cart-shipping") {
+        const cep = String(b.cep || "").replace(/\D/g, "");
+        if (cep.length !== 8) throw new Error("Informe um CEP com 8 n\xFAmeros.");
+        $('#shipping-result').textContent = 'CEP ' + cep.slice(0,5) + '-' + cep.slice(5) + ' · Frete fixo: R$ 15,00.';
+        $('#cart-total').textContent = money(demoTotals().total);
+        return;
+      }
+      if (await handleCheckoutForm(form)) {
+        if (location.hash === "#/checkout") await route();
+        return;
+      }
+      if (form.id === "review-form") {
+        await api("/reviews", "POST", { ...b, rating: Number(b.rating) });
+        toast("Avalia\xE7\xE3o enviada para modera\xE7\xE3o.");
+        form.reset();
+        return;
+      }
+      if (form.id === "admin-period") {
+        location.hash = "/admin/dashboard?" + new URLSearchParams(
+          Object.fromEntries(Object.entries(b).filter(([, v]) => v))
+        );
+        return;
+      }
+      if (form.classList.contains("admin-product")) {
+        const payload = {
+          ...b,
+          id: form.dataset.id || void 0,
+          price: Math.round(Number(b.price) * 100),
+          stock: Number(b.stock),
+          approved: !!b.approved,
+          active: !!b.active,
+          images: b.images.split("\n").filter(Boolean),
+          variants: b.variants.split("\n").filter(Boolean),
+          materialTags: b.materialTags.split("\n").filter(Boolean),
+          translations: JSON.parse(b.translations || "{}")
+        };
+        for (const k of ["weight", "width", "height", "length", "productionDays"])
+          payload[k] = b[k] === "" ? null : Number(b[k]);
+        await api("/admin/products", "POST", payload);
+        state.products = await api("/products");
+        toast("Produto salvo.");
+        await route();
+        return;
+      }
+      if (form.classList.contains("admin-setting")) {
+        await api("/admin/settings", "POST", {
+          key: form.dataset.key,
+          value: JSON.parse(b.value)
+        });
+        state.config = await api("/config");
+        toast("Configura\xE7\xE3o salva.");
+        await route();
+        return;
+      }
+      if (form.id === "admin-coupon") {
+        await api("/admin/coupons", "POST", {
+          ...b,
+          percent: Number(b.percent),
+          active: !!b.active,
+          min_total: Math.round(Number(b.min) * 100)
+        });
+        toast("Cupom salvo.");
+        await route();
+        return;
+      }
+      if (form.classList.contains("admin-order")) {
+        await api("/admin/orders/status", "POST", { ...b, id: form.dataset.id });
+        toast("Etapa registrada.");
+        await route();
+        return;
+      }
+    } catch (error) {
+      setError(form, error);
+    } finally {
+      if (submit) submit.disabled = false;
+    }
+  });
+  window.addEventListener("hashchange", route);
+  document.addEventListener("cartchange", header);
+  async function boot() {
+    try {
+      [state.config, state.products] = await Promise.all([
+        api("/config"),
+        api("/products")
+      ]);
+      state.user = (await api("/session")).user;
+      state.cart = state.cart.filter(
+        (i) => state.products.some((p) => p.id === i.id) && Number.isInteger(i.quantity) && i.quantity > 0 && i.quantity <= 99
+      );
+      await syncFavorites();
+      $("#environment").textContent = "";
+      document.documentElement.lang = state.language;
+      header();
+      footer();
+      initAccessibility();
+      await route();
+    } catch (err) {
+      $("#main").innerHTML = `<section class="container section"><h1>EcoPet</h1><p>N\xE3o foi poss\xEDvel carregar o arquivo. Extraia todas as pastas do ZIP antes de abrir o index. </p><p>${e(err.message)}</p></section>`;
+    }
+  }
+  // Fluxo exclusivamente demonstrativo. Nenhum dado é enviado a um banco.
+  const demo = {step: 1, address: {}, method: 'pix', completed: false};
+  let pendingPix = load('ecopet-pix-clock', null);
+  let demoOrders = load('ecopet-demo-orders', []);
+  if (!Array.isArray(demoOrders)) demoOrders = [];
+  const demoNotice = '';
+  function demoTotals() {
+    const subtotal = state.cart.reduce((sum, item) => sum + (state.products.find(p => p.id === item.id)?.price || 0) * item.quantity, 0);
+    const used = state.user && demoOrders.some(o => o.customer === state.user.name);
+    const discount = safeSession.getItem('ecopet-coupon') === 'CUPETE10' && !used ? Math.round(subtotal * .1) : 0;
+    return {subtotal, discount, shipping: subtotal ? 1500 : 0, total: subtotal - discount + (subtotal ? 1500 : 0)};
+  }
+  function demoSummary() {
+    const total = demoTotals();
+    return `<aside class="panel summary"><h2>Resumo da compra</h2>${state.cart.map(i => {const p = state.products.find(p => p.id === i.id);return `<p>${i.quantity} × ${e(p.name)} <strong>${money(p.price * i.quantity)}</strong></p>`;}).join('')}<div class="total-line"><span>Subtotal</span><strong>${money(total.subtotal)}</strong></div><div class="total-line"><span>Desconto CUPETE10</span><strong>− ${money(total.discount)}</strong></div><div class="total-line"><span>Frete fixo</span><strong>${money(total.shipping)}</strong></div><div class="total-line big"><span>Total</span><strong>${money(total.total)}</strong></div></aside>`;
+  }
+  function demoCheckout() {
+    if(pendingPix && pendingPix.owner === state.user?.name && pendingPix.cart === JSON.stringify(state.cart)) {demo.step=4;demo.method='pix';}
+    if(demo.step===4 && demo.method==='pix' && state.user && state.cart.length) {
+      if(!pendingPix || pendingPix.owner!==state.user.name || pendingPix.cart!==JSON.stringify(state.cart)) {
+        pendingPix={owner:state.user.name,cart:JSON.stringify(state.cart),deadline:Date.now()+60000};
+        save('ecopet-pix-clock',pendingPix);
+      }
+    }
+
+    if (!state.cart.length) return `<section class="container section"><h1>Seu carrinho está vazio</h1><a class="btn" href="#/produtos">Explorar produtos</a></section>`;
+    if (!state.user) return `<section class="container section"><h1>Finalização da compra</h1>${demoNotice}<div class="panel"><h2>Identifique-se para continuar</h2><p>Seu carrinho será preservado.</p><a class="btn" href="#/cadastro">Criar conta</a> <a class="btn secondary" href="#/login">Entrar</a></div></section>`;
+    let content;
+    if (demo.step === 1) content = `<form id="demo-address" class="panel form" autocomplete="off"><h2>Endereço de entrega</h2><p>Olá, ${e(state.user.name)}. Informe o endereço de entrega.</p>${field('CEP','cep','text',demo.address.cep || '', 'required inputmode="numeric" pattern="[0-9]{5}-?[0-9]{3}" placeholder="00000-000"')}${field('Rua','street','text',demo.address.street || '', 'required maxlength="100"')}${field('Número','number','text',demo.address.number || '', 'required maxlength="10"')}${field('Complemento','extra','text',demo.address.extra || '', 'maxlength="60"')}${field('Bairro','district','text',demo.address.district || '', 'required maxlength="60"')}${field('Cidade','city','text',demo.address.city || '', 'required maxlength="60"')}${field('Estado (UF)','uf','text',demo.address.uf || '', 'required pattern="[A-Za-z]{2}" maxlength="2"')}${errorBox()}<button class="btn">Continuar para entrega</button></form>`;
+    if (demo.step === 2) content = `<div class="panel"><h2>Entrega</h2><p>${e(demo.address.street)}, ${e(demo.address.number)} · ${e(demo.address.city)} / ${e(demo.address.uf)} · CEP ${e(demo.address.cep)}</p><div class="notice"><strong>Frete fixo: R$ 15,00</strong><p>Entrega com frete fixo de R$ 15,00.</p></div><div class="buttons"><button class="btn secondary" data-demo-step="1">Voltar</button><button class="btn" data-demo-step="3">Revisar compra</button></div></div>`;
+    if (demo.step === 3) content = `<div class="panel"><h2>Revisão</h2><p>Confira os produtos, o desconto e o frete no resumo.</p><p>Destino: ${e(demo.address.street)}, ${e(demo.address.number)} · ${e(demo.address.city)}/${e(demo.address.uf)} · ${e(demo.address.cep)}</p><div class="buttons"><button class="btn secondary" data-demo-step="2">Voltar</button><button class="btn" data-demo-step="4">Escolher pagamento</button></div></div>`;
+    if (demo.step === 4) content = `<div class="panel payment-panel"><div class="payment-heading"><div><span class="eyebrow">ÚLTIMA ETAPA</span><h2>Como você quer pagar?</h2></div><div class="payment-total"><span>Total com frete</span><strong>${money(demoTotals().total)}</strong></div></div><div class="payment-methods" role="group" aria-label="Forma de pagamento"><button class="btn ${demo.method === 'pix' ? '' : 'secondary'}" data-demo-method="pix" aria-pressed="${demo.method === 'pix'}"><strong>Pix</strong><small>QR Code e confirmação automática</small></button><button class="btn ${demo.method === 'card' ? '' : 'secondary'}" data-demo-method="card" aria-pressed="${demo.method === 'card'}"><strong>Cartão</strong><small>Preencha e finalize a compra</small></button></div>${demo.method === 'pix' ? `<div class="pix-panel"><h3>Pagamento via Pix</h3><figure style="margin:20px auto;max-width:240px"><img src="assets/pix-ilustrativo.svg" alt="QR Code da apresentação EcoPet" width="240" height="240" style="display:block;width:100%;height:auto;background:white;border-radius:12px"></figure><p>Total a pagar</p><strong style="font-size:2rem">${money(demoTotals().total)}</strong><p role="status">Aguardando confirmação</p><strong id="pix-countdown" role="timer" style="font-size:2rem">01:00</strong><p>É só aguardar. Ao terminar a contagem,<br>seu pedido abre automaticamente.</p></div>` : `<form id="demo-card" class="form" autocomplete="off"><h3>Cartão de crédito</h3>${field('Nome no cartão','holder','text','CLIENTE TESTE','required maxlength="60"')}${field('Número do cartão','card','text','4111 1111 1111 1111','required inputmode="numeric" maxlength="19" autocomplete="off"')}<div class="card-short-fields">${field('Validade','expiry','text','12/30','required inputmode="numeric" maxlength="5" placeholder="MM/AA" autocomplete="off"')}${field('Código de segurança','cvv','password','123','required inputmode="numeric" maxlength="3" autocomplete="off"')}</div><p>1x de ${money(demoTotals().total)}, sem juros.</p>${errorBox()}<button class="btn pay-submit">Finalizar compra · ${money(demoTotals().total)}</button></form>`}<div class="buttons" style="margin-top:20px"><button class="btn secondary" data-demo-step="3">Voltar à revisão</button></div></div>`;
+    return `<section class="container section checkout-page"><h1>Finalização da compra</h1>${demoNotice}<ol class="steps">${['Identificação','Endereço','Entrega','Revisão','Pagamento','Confirmação'].map((s,i)=>`<li ${i === demo.step ? 'aria-current="step"' : ''}>${i+1}. ${s}</li>`).join('')}</ol><div class="cart-layout">${content}${demo.step === 4 ? `<details class="payment-summary"><summary>Conferir itens, desconto e frete</summary>${demoSummary()}</details>` : demoSummary()}</div></section>`;
+  }
+  function demoOrderPage(id) {
+    const mine = demoOrders.filter(o => o.customer === state.user?.name);
+    if (id) {
+      const order = mine.find(o => o.id === id);
+      if (!order) return '<section class="container section"><h1>Pedido não encontrado nesta conta</h1><a href="#/pedidos">Meus pedidos</a></section>';
+      return `<section class="container section"><img src="assets/logo-ecopet.png" alt="EcoPet" width="110"><h1>Acompanhe seu pedido</h1>${demoNotice}<div class="panel"><h2>${e(order.id)}</h2><p>${date(order.created)} · ${order.method === 'pix' ? 'Pix' : 'Cartão'} · Pagamento aprovado</p>${order.items.map(i=>`<p>${i.quantity} × ${e(i.name)} — ${money(i.price * i.quantity)}</p>`).join('')}<p>Subtotal: ${money(order.subtotal)} · Desconto: ${money(order.discount)} · Frete: ${money(order.shipping)}</p><h3>Total: ${money(order.total)}</h3>${demoTracking(order)}</div><div class="buttons"><a class="btn" href="#/pedidos">Meus pedidos</a><a class="btn secondary" href="#/produtos">Continuar comprando</a></div></section>`;
+    }
+    return `<section class="container section"><h1>Meus pedidos</h1>${demoNotice}${mine.length ? mine.map(o=>`<article class="panel"><h2>${e(o.id)}</h2><p>${date(o.created)} · ${money(o.total)} · ${e(o.timeline?.at(-1)?.label || "Pedido recebido")}</p><a class="btn secondary" href="#/pedido/${encodeURIComponent(o.id)}">Ver pedido</a></article>`).join('') : '<div class="empty">Você ainda não fez pedidos.</div>'}</section>`;
+  }
+  const demoStages = ['Pedido recebido','Pagamento aprovado','Em preparação','Embalado','Enviado','Saiu para entrega','Entregue'];
+  function demoTracking(order) {
+    refreshTracking(order);
+    const timeline = order.timeline;
+    const current = timeline.length - 1;
+    return `<h3>Atualizações do pedido</h3><p role="status"><strong>${e(timeline[current].label)}</strong></p>
+      <ol class="demo-timeline">${demoStages.map((label,i)=>`<li ${i===current ? 'aria-current="step"' : ''}><strong>${i <= current ? '✓' : '○'} ${e(label)}</strong><small>${timeline[i] ? date(timeline[i].at) : 'Aguardando'}</small></li>`).join('')}</ol>
+      <p>${current === 6 ? 'Pedido entregue. Obrigado por escolher a EcoPet!' : current >= 4 ? 'Seu pedido está a caminho.' : 'Estamos cuidando do seu pedido.'}</p>`;
+  }
+  // Cronologia automática de apresentação, sem eventos de transportadora.
+  function refreshTracking(order) {
+    if (!order.autoTracking) return;
+    const created = Date.parse(order.created);
+    const count = Math.min(7, 2 + Math.floor(Math.max(0, Date.now()-created)/60000));
+    order.timeline ||= [];
+    while(order.timeline.length < count) {
+      const i=order.timeline.length;
+      order.timeline.push({label:demoStages[i],at:new Date(created+Math.max(0,i-1)*60000).toISOString()});
+    }
+    save('ecopet-demo-orders',demoOrders);
+  }
+  async function finishDemo(method) {
+    if (demo.completed || !state.user || !state.cart.length || demo.step !== 4) return;
+    demo.completed = true;
+    save('ecopet-pix-clock', null);pendingPix=null;
+    const order = {autoTracking:true, timeline: [{label:'Pedido recebido', at:new Date().toISOString()}, {label:'Pagamento aprovado', at:new Date().toISOString()}], id: 'DEMO-' + Date.now().toString(36).toUpperCase(), customer: state.user.name, created: new Date().toISOString(), method, ...demoTotals(), items: state.cart.map(i=>{const p=state.products.find(p=>p.id===i.id);return {name:p.name,price:p.price,quantity:i.quantity};})};
+    demoOrders.unshift(order);
+    save('ecopet-demo-orders',demoOrders);
+    state.cart=[];persistCart();safeSession.removeItem('ecopet-coupon');
+    demo.address={};demo.step=1;
+    toast('Pagamento aprovado! Seu pedido foi registrado.',true);
+    location.hash='/pedido/'+order.id;
+  }
+  document.addEventListener('click', async event => {
+    const button=event.target.closest('button');if(!button)return;
+    if(button.dataset.demoStep){demo.step=Number(button.dataset.demoStep);if(demo.step<4){pendingPix=null;save('ecopet-pix-clock',null);}await route();}
+    if(button.dataset.demoMethod){demo.method=button.dataset.demoMethod;if(demo.method==='card'){pendingPix=null;save('ecopet-pix-clock',null);}await route();}
+
+  });
+
+  // Clock and order progression run locally; there is no payment confirmation service.
+  setInterval(async () => {
+    const timer = $('#pix-countdown');
+    if(timer && pendingPix && pendingPix.owner===state.user?.name && pendingPix.cart===JSON.stringify(state.cart)) {
+      const remaining=Math.max(0,Math.ceil((pendingPix.deadline-Date.now())/1000));
+      timer.textContent=String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0');
+      if(remaining===0) await finishDemo('pix');
+    }
+    const match=location.hash.match(/^#\/pedido\/(.+)$/);
+    if(match){const order=demoOrders.find(o=>o.id===match[1] && o.customer===state.user?.name);
+      if(order){const before=order.timeline?.length;refreshTracking(order);if(order.timeline?.length!==before){toast('Atualização do pedido: '+order.timeline.at(-1).label,true);await route();}}
+    }
+  },1000);
+
+  // Solicitações EcoTroca: nenhuma transmissão ocorre sem destino configurado.
+  let ecoPhotoUrls = [];
+  function ecoTrocaPage() {
+    ecoPhotoUrls.forEach(url=>URL.revokeObjectURL(url));ecoPhotoUrls=[];
+    return `<section class="container section ecotroca-page"><span class="eyebrow">PROJETO ECOTROCA</span><h1>Seu produto pode ganhar<br>uma nova história.</h1><p class="lead">Envie os detalhes e fotos do seu produto EcoPet. Vamos avaliar se ele está em condições de voltar para ser reaproveitado.</p><div class="ecotroca-layout"><div><div class="panels"><article class="panel"><span class="eyebrow">01</span><h3>Conte para a gente</h3><p>Informe o produto comprado e mostre como ele está hoje.</p></article><article class="panel"><span class="eyebrow">02</span><h3>Aguarde a avaliação</h3><p>A equipe verifica as fotos e orienta sobre a possibilidade de devolução.</p></article><article class="panel"><span class="eyebrow">03</span><h3>Ganhe um benefício</h3><p>Produtos aprovados podem render até 10% de desconto, conforme o produto e suas condições.</p></article></div>
+      <form id="ecotroca-form" class="panel form" style="margin-top:24px"><h2>Solicitar avaliação</h2><p>Preencha seus dados de contato e as informações do produto.</p><div class="ecotroca-fields">${field('Nome completo','name','text','','required autocomplete="name" maxlength="100"')}${field('E-mail','email','email','','required autocomplete="email" maxlength="254"')}${field('Telefone / WhatsApp','phone','tel','','required autocomplete="tel" inputmode="tel" minlength="10" maxlength="20"')}${field('Cidade e estado','city','text','','required maxlength="100"')}</div><h3>Sobre a sua compra</h3><label class="field">Produto comprado<select name="product" required><option value="">Selecione o produto</option>${state.products.map(p=>`<option value="${e(p.id)}">${e(p.name)}</option>`).join('')}</select></label><div class="ecotroca-fields">${field('Número do pedido (se tiver)','order','text','','maxlength="60"')}${field('Data aproximada da compra (opcional)','purchaseDate','date','','max="'+new Date().toISOString().slice(0,10)+'"')}</div><label class="field">Como está o produto?<select name="condition" required><option value="">Selecione uma opção</option><option>Pouco usado</option><option>Usado, com sinais de desgaste</option><option>Danificado ou com partes faltando</option><option>Outro estado</option></select></label><label class="field">Conte mais sobre as condições<textarea name="description" required minlength="10" maxlength="2000" rows="5" placeholder="Descreva o desgaste, partes soltas ou faltantes e o que você gostaria de devolver."></textarea></label><label class="field">Fotos atuais do produto<input type="file" id="ecotroca-photos" name="photos" accept="image/jpeg,image/png,image/webp" multiple required aria-describedby="ecotroca-photo-help"></label><small id="ecotroca-photo-help">Escolha de 1 a 3 fotos em JPG, PNG ou WebP, com até 5 MB cada. Fotografe o produto inteiro e os detalhes do desgaste; evite incluir pessoas ou documentos.</small><div id="ecotroca-previews" class="ecotroca-previews"></div><label class="check"><input type="checkbox" name="consent" required>Autorizo o uso dos dados e fotos enviados para avaliar esta solicitação e entrar em contato comigo sobre a EcoTroca.</label><p class="muted">O envio não garante a aceitação da devolução nem um desconto de 10%. Aguarde a avaliação antes de enviar o produto.</p>${errorBox()}<button class="btn">Revisar solicitação</button></form><div id="ecotroca-review" aria-live="polite"></div></div><aside class="panel ecotroca-benefit"><span class="eyebrow">CUIDADO QUE CONTINUA</span><h2>Até 10%<br>de desconto</h2><p>O benefício depende do produto, das condições de reaproveitamento e da aprovação da equipe.</p><img src="assets/embalagens-novas.jpeg" alt="Referência de embalagens EcoPet" style="width:100%;border-radius:14px" loading="lazy"><h3>O que acontece depois?</h3><p>A EcoPet entra em contato para informar o resultado da análise e, se aprovado, as orientações de devolução e o benefício disponível.</p></aside></div></section>`;
+  }
+  function validateEcoPhotos(files) {
+    if(files.length<1 || files.length>3) throw new Error('Escolha de 1 a 3 fotos do produto.');
+    for(const f of files) if(!['image/jpeg','image/png','image/webp'].includes(f.type) || f.size>5*1024*1024 || f.size===0) throw new Error('Use fotos JPG, PNG ou WebP com até 5 MB cada.');
+  }
+  document.addEventListener('change', event=>{
+    if(event.target.id!=='ecotroca-photos')return;
+    const form=event.target.form;form.querySelector('[data-error]').textContent='';
+    ecoPhotoUrls.forEach(url=>URL.revokeObjectURL(url));ecoPhotoUrls=[];
+    $('#ecotroca-previews').replaceChildren();$('#ecotroca-review').replaceChildren();
+    try {
+      const files=Array.from(event.target.files);validateEcoPhotos(files);
+      for(const f of files){const url=URL.createObjectURL(f);ecoPhotoUrls.push(url);const img=document.createElement('img');img.src=url;img.alt='Foto selecionada do produto: '+f.name;$('#ecotroca-previews').append(img);}
+    }catch(error){event.target.value='';setError(form,error);}
+  });
+
+  boot();
+})();
+
+document.querySelector(".skip").addEventListener("click", function(event) { event.preventDefault(); document.getElementById("main").focus(); });
+</script>
+</body>
+</html>

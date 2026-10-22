@@ -1,0 +1,99 @@
+ECOPET — APRESENTAÇÃO LOCAL
+
+COMO ABRIR
+1. Extraia o ZIP inteiro.
+2. Abra a pasta EcoPet_Simples.
+3. Dê dois cliques em index.html. Deixe assets junto dele.
+Não precisa instalar Node ou usar terminal.
+
+CADASTRO
+Clique em Entrar / Criar conta e depois Criar conta.
+Preencha apelido, e-mail fictício, CPF fictício e senha de demonstração.
+Exemplos: Lele, cliente@example.com, 000.000.000-00, demo1234.
+Só o apelido é salvo e aparece no cabeçalho. E-mail, CPF e senha não são
+guardados nem enviados. Esse perfil não tem autenticação real.
+
+COMPRA DE DEMONSTRAÇÃO
+Adicione produtos ao carrinho. Frete fixo: R$ 15,00, incluído no total.
+O CEP aceita oito dígitos (com ou sem hífen); não consulta distância.
+CUPETE10 dá 10% sobre os produtos no primeiro pedido local desse apelido.
+Isso não impede uso em outro navegador: é uma regra de apresentação.
+Clique em Finalizar compra, informe endereço fictício, confira entrega
+e revisão e escolha Pix ou cartão.
+Pix: aguarde a contagem de 1 minuto. A confirmação abre automaticamente.
+Não há QR Code pagável ou cobrança. A contagem é parte da apresentação.
+Cartão: use somente 4111 1111 1111 1111, validade 12/30 e código 123.
+O nome deve ser fictício. Os campos já vêm com dados de exemplo.
+Nenhuma cobrança é realizada. Não use dados reais.
+
+ACOMPANHAMENTO
+Depois de finalizar, a página Acompanhe seu pedido abre automaticamente.
+As etapas avançam automaticamente a cada minuto: preparação, embalado,
+enviado, saiu para entrega e entregue. Você não precisa apertar botões.
+O horário do pedido determina o andamento, inclusive ao reabrir a página.
+O Pix usa um prazo salvo no navegador quando o armazenamento é permitido;
+atualizar a página não reinicia esse prazo.
+Meus pedidos permite reabrir o acompanhamento. Não há rastreio real.
+
+DADOS LOCAIS
+Apelido, carrinho, favoritos, pedidos de demonstração e preferências podem
+ficar salvos neste navegador. Limpar os dados pode apagá-los. Não são
+sincronizados entre aparelhos. Se o navegador bloquear o armazenamento,
+o perfil e os pedidos podem durar só até fechar ou atualizar a página.
+Endereço, CPF, e-mail, senha e cartão não são gravados pelo site.
+
+ARQUIVOS
+index.html: site, estilos e lógica com comentários.
+assets: imagens originais e fontes preservadas.
+LEIA_PRIMEIRO.txt: este guia.
+
+VERIFICAÇÃO
+Testes automatizados do fluxo passaram: frete, desconto, cadastro, Pix e
+cartão demonstrativos, acompanhamento, persistência e ausência de dados
+sensíveis no armazenamento. Sem inspeção visual em navegador nesta entrega.
+
+AVISOS
+A interface não exibe os avisos de apresentação no topo ou nos formulários. Toda a compra continua sendo uma apresentação local,
+sem verificação bancária, cobrança, envio ou rastreamento real.
+
+QR CODE ILUSTRATIVO
+O QR na tela Pix contém apenas uma mensagem de apresentação da EcoPet.
+Não contém chave Pix, endereço de pagamento ou dados bancários.
+O contador e a confirmação automática continuam funcionando como antes.
+
+DESIGN RENOVADO
+Página inicial com destaque fotográfico, categorias coloridas, produtos,
+história da marca, materiais, EcoTroca, perguntas frequentes e Instagram.
+Páginas dos produtos com quadros coloridos e quatro sugestões do catálogo.
+Paleta oficial, fonte Lato, logo e fotografias originais preservados.
+Layouts adaptativos para celular, tablet e computador.
+Testes locais de navegação, detalhes e compra passaram. A conferência
+visual no navegador não foi realizada porque o acesso à prévia foi bloqueado.
+
+PAGAMENTO E CELULAR
+Escolha entre os dois botões grandes Pix e Cartão. O total com frete aparece
+no topo. No cartão, os dados de exemplo continuam preenchidos; clique em
+Finalizar compra. No Pix, aguarde a contagem.
+Os detalhes de itens, desconto e frete abrem ao tocar em Conferir itens.
+O layout tem regras para telas estreitas, campos de 16px e botões maiores.
+O fluxo foi verificado em testes locais; a aparência em aparelhos físicos
+ainda precisa de conferência.
+Para abrir no celular, extraia o ZIP inteiro e mantenha assets junto do index.
+Se o visualizador de arquivos do aparelho não executar HTML/JavaScript,
+será necessário abrir por um navegador compatível ou hospedar o site.
+
+ABERTURA E FOTOGRAFIAS ATUALIZADAS
+Abertura com fotografia inteira do furão na rede, sem selo redondo.
+Novas fotos do ratinho, tapete, embalagens e coleção adicionadas.
+As fotos anteriores dos produtos continuam nas galerias correspondentes.
+As cinco imagens enviadas estão incluídas em assets, sem alterações nos arquivos.
+A explicação de que não há cobrança real permanece neste guia.
+O QR Code contém somente texto, não uma chave Pix; o contador apenas
+apresenta uma confirmação automática, sem verificar pagamento bancário.
+
+ECOTROCA
+Formulário com contato, produto, condições, até 3 fotos de 5 MB e revisão.
+Até 10% de desconto depende de avaliação e aprovação, sem cupom automático.
+O destino para receber os formulários ainda precisa ser configurado.
+O site não transmite nem afirma enviar solicitações enquanto isso não estiver
+configurado. Fotos e campos ficam temporariamente na página, sem gravação local.
